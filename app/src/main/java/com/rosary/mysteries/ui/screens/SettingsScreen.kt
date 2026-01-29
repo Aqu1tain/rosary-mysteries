@@ -32,6 +32,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import androidx.core.os.LocaleListCompat
 import com.rosary.mysteries.R
 import java.util.Locale
@@ -125,14 +126,13 @@ private fun LanguageItem(
 
 private fun getCurrentLocale(context: Context): String {
     return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-        context.getSystemService(LocaleManager::class.java)
-            ?.applicationLocales
-            ?.takeIf { !it.isEmpty }
-            ?.get(0)?.language ?: Locale.getDefault().language
+        val locales = context.getSystemService(LocaleManager::class.java)?.applicationLocales
+        if (locales != null && !locales.isEmpty) locales.get(0)?.language ?: Locale.getDefault().language
+        else Locale.getDefault().language
     } else {
-        AppCompatDelegate.getApplicationLocales()
-            .takeIf { !it.isEmpty }
-            ?.get(0)?.language ?: Locale.getDefault().language
+        val locales = AppCompatDelegate.getApplicationLocales()
+        if (!locales.isEmpty) locales.get(0)?.language ?: Locale.getDefault().language
+        else Locale.getDefault().language
     }
 }
 
