@@ -5,53 +5,38 @@
     android:viewportWidth="108"
     android:viewportHeight="108">
 
-    <path
-        android:fillColor="#1A237E"
-        android:pathData="M54,24
-            C54,24 60,36 60,42
-            C60,45.3 57.3,48 54,48
-            C50.7,48 48,45.3 48,42
-            C48,36 54,24 54,24Z" />
-
+    <!-- Cross vertical -->
     <path
         android:fillColor="#D4AF37"
-        android:pathData="M54,52 L54,84"
-        android:strokeWidth="3"
-        android:strokeColor="#D4AF37"/>
+        android:pathData="M52,36 L56,36 L56,84 L52,84 Z"/>
 
+    <!-- Cross horizontal -->
     <path
         android:fillColor="#D4AF37"
-        android:pathData="M38,68 L70,68"
-        android:strokeWidth="3"
-        android:strokeColor="#D4AF37"/>
+        android:pathData="M38,52 L70,52 L70,56 L38,56 Z"/>
 
-    <circle
+    <!-- Bead top -->
+    <path
         android:fillColor="#1A237E"
-        android:cx="54"
-        android:cy="56"
-        android:r="4"/>
+        android:pathData="M54,42 m-5,0 a5,5 0 1,1 10,0 a5,5 0 1,1 -10,0"/>
 
-    <circle
+    <!-- Bead center -->
+    <path
         android:fillColor="#1A237E"
-        android:cx="54"
-        android:cy="68"
-        android:r="4"/>
+        android:pathData="M54,54 m-5,0 a5,5 0 1,1 10,0 a5,5 0 1,1 -10,0"/>
 
-    <circle
+    <!-- Bead bottom -->
+    <path
         android:fillColor="#1A237E"
-        android:cx="54"
-        android:cy="80"
-        android:r="4"/>
+        android:pathData="M54,66 m-5,0 a5,5 0 1,1 10,0 a5,5 0 1,1 -10,0"/>
 
-    <circle
+    <!-- Bead left -->
+    <path
         android:fillColor="#1A237E"
-        android:cx="42"
-        android:cy="68"
-        android:r="4"/>
+        android:pathData="M42,54 m-5,0 a5,5 0 1,1 10,0 a5,5 0 1,1 -10,0"/>
 
-    <circle
+    <!-- Bead right -->
+    <path
         android:fillColor="#1A237E"
-        android:cx="66"
-        android:cy="68"
-        android:r="4"/>
+        android:pathData="M66,54 m-5,0 a5,5 0 1,1 10,0 a5,5 0 1,1 -10,0"/>
 </vector>
