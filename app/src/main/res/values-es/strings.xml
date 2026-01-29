@@ -6,6 +6,16 @@
     <string name="back">Volver</string>
     <string name="support">Apoyar</string>
     <string name="today_mysteries">Misterios de hoy</string>
+    <string name="menu">Menú</string>
+    <string name="how_to_pray">Cómo rezar el Rosario</string>
+    <string name="how_to_intro">El Rosario comprende veinte misterios organizados en cuatro series:</string>
+    <string name="how_to_days">Gozosos (lunes, sábado) - Luminosos (jueves) - Dolorosos (martes, viernes) - Gloriosos (miércoles, domingo)</string>
+    <string name="how_to_begin_title">Comenzar con</string>
+    <string name="how_to_begin">En el nombre del Padre y del Hijo y del Espíritu Santo. Amén.\n\nDios mío, ven en mi auxilio. Señor, date prisa en socorrerme.\n\nGloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.</string>
+    <string name="how_to_decade_title">Para cada decena</string>
+    <string name="how_to_decade">1. Anunciar el misterio\n2. Meditar sobre ese evento\n3. Rezar un Padre Nuestro\n4. Rezar diez Ave Marías\n5. Rezar un Gloria</string>
+    <string name="how_to_closing_title">Conclusión</string>
+    <string name="how_to_closing">Al finalizar, se puede rezar las Letanías de Loreto u otra oración mariana.</string>
 
     <!-- Mystery Types -->
     <string name="joyful_mysteries">Misterios Gozosos</string>
@@ -14,50 +24,70 @@
     <string name="luminous_mysteries">Misterios Luminosos</string>
 
     <!-- Joyful Mysteries -->
-    <string name="joyful_1_title">La Anunciacion</string>
-    <string name="joyful_1_desc">El angel Gabriel anuncia a Maria que concebirá al Hijo de Dios.</string>
-    <string name="joyful_2_title">La Visitacion</string>
-    <string name="joyful_2_desc">Maria visita a su prima Isabel, embarazada de Juan el Bautista.</string>
+    <string name="joyful_1_title">La Anunciación</string>
+    <string name="joyful_1_desc">El ángel Gabriel anuncia a María que concebirá al Hijo de Dios.</string>
+    <string name="joyful_1_fruit">Humildad</string>
+    <string name="joyful_2_title">La Visitación</string>
+    <string name="joyful_2_desc">María visita a su prima Isabel, embarazada de Juan el Bautista.</string>
+    <string name="joyful_2_fruit">Caridad con el prójimo</string>
     <string name="joyful_3_title">La Natividad</string>
-    <string name="joyful_3_desc">Jesus nace en Belen.</string>
-    <string name="joyful_4_title">La Presentacion en el Templo</string>
-    <string name="joyful_4_desc">Maria y Jose presentan a Jesus en el Templo.</string>
+    <string name="joyful_3_desc">Jesús nace en Belén.</string>
+    <string name="joyful_3_fruit">Pobreza, desprendimiento</string>
+    <string name="joyful_4_title">La Presentación en el Templo</string>
+    <string name="joyful_4_desc">María y José presentan a Jesús en el Templo.</string>
+    <string name="joyful_4_fruit">Obediencia</string>
     <string name="joyful_5_title">El Hallazgo en el Templo</string>
-    <string name="joyful_5_desc">Maria y Jose encuentran a Jesus ensenando en el Templo.</string>
+    <string name="joyful_5_desc">María y José encuentran a Jesús enseñando en el Templo.</string>
+    <string name="joyful_5_fruit">Buscar a Dios en todo</string>
 
     <!-- Sorrowful Mysteries -->
-    <string name="sorrowful_1_title">La Agonia en el Huerto</string>
-    <string name="sorrowful_1_desc">Jesus ora en el Huerto de Getsemani.</string>
-    <string name="sorrowful_2_title">La Flagelacion</string>
-    <string name="sorrowful_2_desc">Jesus es azotado por los soldados romanos.</string>
-    <string name="sorrowful_3_title">La Coronacion de Espinas</string>
-    <string name="sorrowful_3_desc">Jesus es coronado con espinas y burlado.</string>
+    <string name="sorrowful_1_title">La Agonía en el Huerto</string>
+    <string name="sorrowful_1_desc">Jesús ora en el Huerto de Getsemaní.</string>
+    <string name="sorrowful_1_fruit">Contrición, dolor por los pecados</string>
+    <string name="sorrowful_2_title">La Flagelación</string>
+    <string name="sorrowful_2_desc">Jesús es azotado por los soldados romanos.</string>
+    <string name="sorrowful_2_fruit">Mortificación de los sentidos</string>
+    <string name="sorrowful_3_title">La Coronación de Espinas</string>
+    <string name="sorrowful_3_desc">Jesús es coronado con espinas y burlado.</string>
+    <string name="sorrowful_3_fruit">Desprecio del mundo</string>
     <string name="sorrowful_4_title">El Camino del Calvario</string>
-    <string name="sorrowful_4_desc">Jesus carga su cruz hacia el Calvario.</string>
-    <string name="sorrowful_5_title">La Crucifixion</string>
-    <string name="sorrowful_5_desc">Jesus muere en la cruz por nuestra salvacion.</string>
+    <string name="sorrowful_4_desc">Jesús carga su cruz hacia el Calvario.</string>
+    <string name="sorrowful_4_fruit">Paciencia en las pruebas</string>
+    <string name="sorrowful_5_title">La Crucifixión</string>
+    <string name="sorrowful_5_desc">Jesús muere en la cruz por nuestra salvación.</string>
+    <string name="sorrowful_5_fruit">Perdón de las ofensas</string>
 
     <!-- Glorious Mysteries -->
-    <string name="glorious_1_title">La Resurreccion</string>
-    <string name="glorious_1_desc">Jesus resucita de entre los muertos al tercer dia.</string>
-    <string name="glorious_2_title">La Ascension</string>
-    <string name="glorious_2_desc">Jesus asciende al Cielo.</string>
-    <string name="glorious_3_title">La Venida del Espiritu Santo</string>
-    <string name="glorious_3_desc">El Espiritu Santo desciende sobre los Apostoles en Pentecostes.</string>
-    <string name="glorious_4_title">La Asuncion</string>
-    <string name="glorious_4_desc">Maria es asunta al Cielo en cuerpo y alma.</string>
-    <string name="glorious_5_title">La Coronacion de Maria</string>
-    <string name="glorious_5_desc">Maria es coronada Reina del Cielo y de la Tierra.</string>
+    <string name="glorious_1_title">La Resurrección</string>
+    <string name="glorious_1_desc">Jesús resucita de entre los muertos al tercer día.</string>
+    <string name="glorious_1_fruit">Fe</string>
+    <string name="glorious_2_title">La Ascensión</string>
+    <string name="glorious_2_desc">Jesús asciende al Cielo.</string>
+    <string name="glorious_2_fruit">Esperanza y deseo del Cielo</string>
+    <string name="glorious_3_title">La Venida del Espíritu Santo</string>
+    <string name="glorious_3_desc">El Espíritu Santo desciende sobre los Apóstoles en Pentecostés.</string>
+    <string name="glorious_3_fruit">Dones del Espíritu Santo</string>
+    <string name="glorious_4_title">La Asunción</string>
+    <string name="glorious_4_desc">María es asunta al Cielo en cuerpo y alma.</string>
+    <string name="glorious_4_fruit">Gracia de una buena muerte</string>
+    <string name="glorious_5_title">La Coronación de María</string>
+    <string name="glorious_5_desc">María es coronada Reina del Cielo y de la Tierra.</string>
+    <string name="glorious_5_fruit">Devoción a María</string>
 
     <!-- Luminous Mysteries -->
-    <string name="luminous_1_title">El Bautismo en el Jordan</string>
-    <string name="luminous_1_desc">Jesus es bautizado por Juan en el rio Jordan.</string>
-    <string name="luminous_2_title">Las Bodas de Cana</string>
-    <string name="luminous_2_desc">Jesus realiza su primer milagro en la boda.</string>
+    <string name="luminous_1_title">El Bautismo en el Jordán</string>
+    <string name="luminous_1_desc">Jesús es bautizado por Juan en el río Jordán.</string>
+    <string name="luminous_1_fruit">Fidelidad a las promesas del bautismo</string>
+    <string name="luminous_2_title">Las Bodas de Caná</string>
+    <string name="luminous_2_desc">Jesús realiza su primer milagro en la boda.</string>
+    <string name="luminous_2_fruit">Confianza en María</string>
     <string name="luminous_3_title">El Anuncio del Reino</string>
-    <string name="luminous_3_desc">Jesus proclama el Reino de Dios y llama a la conversion.</string>
-    <string name="luminous_4_title">La Transfiguracion</string>
-    <string name="luminous_4_desc">Jesus se transfigura en el Monte Tabor.</string>
-    <string name="luminous_5_title">La Institucion de la Eucaristia</string>
-    <string name="luminous_5_desc">Jesus instituye la Eucaristia en la Ultima Cena.</string>
+    <string name="luminous_3_desc">Jesús proclama el Reino de Dios y llama a la conversión.</string>
+    <string name="luminous_3_fruit">Conversión del corazón</string>
+    <string name="luminous_4_title">La Transfiguración</string>
+    <string name="luminous_4_desc">Jesús se transfigura en el Monte Tabor.</string>
+    <string name="luminous_4_fruit">Deseo de santidad</string>
+    <string name="luminous_5_title">La Institución de la Eucaristía</string>
+    <string name="luminous_5_desc">Jesús instituye la Eucaristía en la Última Cena.</string>
+    <string name="luminous_5_fruit">Amor a la Eucaristía</string>
 </resources>
