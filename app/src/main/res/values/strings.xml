@@ -5,7 +5,7 @@
     <string name="language">Language</string>
     <string name="back">Back</string>
     <string name="support">Support</string>
-    <string name="today_mysteries">Today\'s Mysteries</string>
+    <string name="today_mysteries">Today</string>
     <string name="menu">Menu</string>
     <string name="how_to_pray">How to pray the Rosary</string>
     <string name="how_to_intro">The Rosary comprises twenty mysteries organized into four sets:</string>
@@ -17,77 +17,92 @@
     <string name="how_to_closing_title">Closing</string>
     <string name="how_to_closing">At the conclusion, one may recite the Litanies of Loreto or another Marian prayer.</string>
 
-    <!-- Mystery Types -->
     <string name="joyful_mysteries">Joyful Mysteries</string>
     <string name="sorrowful_mysteries">Sorrowful Mysteries</string>
     <string name="glorious_mysteries">Glorious Mysteries</string>
     <string name="luminous_mysteries">Luminous Mysteries</string>
 
-    <!-- Joyful Mysteries -->
     <string name="joyful_1_title">The Annunciation</string>
-    <string name="joyful_1_desc">The Angel Gabriel announces to Mary that she will conceive the Son of God.</string>
+    <string name="joyful_1_desc">In the sixth month the angel Gabriel was sent from God to a city of Galilee named Nazareth, to a virgin betrothed to a man whose name was Joseph.</string>
     <string name="joyful_1_fruit">Humility</string>
+    <string name="joyful_1_ref">Lk 1:26–27</string>
     <string name="joyful_2_title">The Visitation</string>
-    <string name="joyful_2_desc">Mary visits her cousin Elizabeth, who is pregnant with John the Baptist.</string>
+    <string name="joyful_2_desc">Elizabeth was filled with the Holy Spirit and she exclaimed with a loud cry: Blessed are you among women, and blessed is the fruit of your womb.</string>
     <string name="joyful_2_fruit">Love of neighbor</string>
+    <string name="joyful_2_ref">Lk 1:39–42</string>
     <string name="joyful_3_title">The Nativity</string>
-    <string name="joyful_3_desc">Jesus is born in Bethlehem.</string>
-    <string name="joyful_3_fruit">Poverty, detachment from things</string>
+    <string name="joyful_3_desc">She gave birth to her first-born son and wrapped him in swaddling cloths, and laid him in a manger, because there was no place for them in the inn.</string>
+    <string name="joyful_3_fruit">Poverty, detachment</string>
+    <string name="joyful_3_ref">Lk 2:1–7</string>
     <string name="joyful_4_title">The Presentation</string>
-    <string name="joyful_4_desc">Mary and Joseph present Jesus in the Temple.</string>
+    <string name="joyful_4_desc">When the time came for their purification according to the law of Moses, they brought him up to Jerusalem to present him to the Lord.</string>
     <string name="joyful_4_fruit">Obedience</string>
+    <string name="joyful_4_ref">Lk 2:21–24</string>
     <string name="joyful_5_title">Finding in the Temple</string>
-    <string name="joyful_5_desc">Mary and Joseph find Jesus teaching in the Temple.</string>
+    <string name="joyful_5_desc">After three days they found him in the temple, sitting among the teachers, listening to them and asking them questions.</string>
     <string name="joyful_5_fruit">Seeking God in all things</string>
+    <string name="joyful_5_ref">Lk 2:41–47</string>
 
-    <!-- Sorrowful Mysteries -->
     <string name="sorrowful_1_title">The Agony in the Garden</string>
-    <string name="sorrowful_1_desc">Jesus prays in the Garden of Gethsemane.</string>
-    <string name="sorrowful_1_fruit">Contrition, sorrow for sins</string>
+    <string name="sorrowful_1_desc">Going a little farther he fell on his face and prayed: My Father, if it be possible, let this cup pass from me; nevertheless, not as I will, but as you will.</string>
+    <string name="sorrowful_1_fruit">Contrition for sins</string>
+    <string name="sorrowful_1_ref">Mt 26:36–39</string>
     <string name="sorrowful_2_title">The Scourging at the Pillar</string>
-    <string name="sorrowful_2_desc">Jesus is scourged by the Roman soldiers.</string>
+    <string name="sorrowful_2_desc">Then Pilate took Jesus and scourged him.</string>
     <string name="sorrowful_2_fruit">Mortification of the senses</string>
+    <string name="sorrowful_2_ref">Mt 27:26</string>
     <string name="sorrowful_3_title">The Crowning with Thorns</string>
-    <string name="sorrowful_3_desc">Jesus is crowned with thorns and mocked.</string>
+    <string name="sorrowful_3_desc">And plaiting a crown of thorns they put it on his head, and put a reed in his right hand. And kneeling before him they mocked him.</string>
     <string name="sorrowful_3_fruit">Contempt of the world</string>
+    <string name="sorrowful_3_ref">Mt 27:27–29</string>
     <string name="sorrowful_4_title">The Carrying of the Cross</string>
-    <string name="sorrowful_4_desc">Jesus carries His cross to Calvary.</string>
+    <string name="sorrowful_4_desc">And they compelled a passer-by, Simon of Cyrene, to carry his cross. And they brought him to the place called Golgotha.</string>
     <string name="sorrowful_4_fruit">Patience in trials</string>
+    <string name="sorrowful_4_ref">Mk 15:21–22</string>
     <string name="sorrowful_5_title">The Crucifixion</string>
-    <string name="sorrowful_5_desc">Jesus dies on the cross for our salvation.</string>
+    <string name="sorrowful_5_desc">And Jesus said: Father, forgive them; for they know not what they do. Then Jesus, crying with a loud voice, said: Father, into your hands I commit my spirit.</string>
     <string name="sorrowful_5_fruit">Forgiveness of injuries</string>
+    <string name="sorrowful_5_ref">Lk 23:33–46</string>
 
-    <!-- Glorious Mysteries -->
     <string name="glorious_1_title">The Resurrection</string>
-    <string name="glorious_1_desc">Jesus rises from the dead on the third day.</string>
+    <string name="glorious_1_desc">Why do you seek the living among the dead? He is not here, but has risen.</string>
     <string name="glorious_1_fruit">Faith</string>
+    <string name="glorious_1_ref">Lk 24:1–5</string>
     <string name="glorious_2_title">The Ascension</string>
-    <string name="glorious_2_desc">Jesus ascends into Heaven.</string>
+    <string name="glorious_2_desc">The Lord Jesus, after he had spoken to them, was taken up into heaven, and sat down at the right hand of God.</string>
     <string name="glorious_2_fruit">Hope and desire for Heaven</string>
+    <string name="glorious_2_ref">Mk 16:19</string>
     <string name="glorious_3_title">The Descent of the Holy Spirit</string>
-    <string name="glorious_3_desc">The Holy Spirit descends upon the Apostles at Pentecost.</string>
+    <string name="glorious_3_desc">They were all filled with the Holy Spirit and began to speak in other tongues, as the Spirit gave them utterance.</string>
     <string name="glorious_3_fruit">Gifts of the Holy Spirit</string>
+    <string name="glorious_3_ref">Acts 2:1–4</string>
     <string name="glorious_4_title">The Assumption</string>
-    <string name="glorious_4_desc">Mary is assumed body and soul into Heaven.</string>
+    <string name="glorious_4_desc">He who is mighty has done great things for me, and holy is his name.</string>
     <string name="glorious_4_fruit">Grace of a happy death</string>
+    <string name="glorious_4_ref">Lk 1:48–49</string>
     <string name="glorious_5_title">The Coronation</string>
-    <string name="glorious_5_desc">Mary is crowned Queen of Heaven and Earth.</string>
+    <string name="glorious_5_desc">A woman clothed with the sun, with the moon under her feet, and on her head a crown of twelve stars.</string>
     <string name="glorious_5_fruit">Devotion to Mary</string>
+    <string name="glorious_5_ref">Rev 12:1</string>
 
-    <!-- Luminous Mysteries -->
     <string name="luminous_1_title">The Baptism in the Jordan</string>
-    <string name="luminous_1_desc">Jesus is baptized by John in the River Jordan.</string>
+    <string name="luminous_1_desc">And when Jesus was baptized, he went up immediately from the water, and behold, the heavens were opened and he saw the Spirit of God descending like a dove.</string>
     <string name="luminous_1_fruit">Fidelity to baptismal promises</string>
+    <string name="luminous_1_ref">Mt 3:16–17</string>
     <string name="luminous_2_title">The Wedding at Cana</string>
-    <string name="luminous_2_desc">Jesus performs His first miracle at the wedding feast.</string>
+    <string name="luminous_2_desc">On the third day there was a marriage at Cana in Galilee, and the mother of Jesus was there. His mother said to the servants: Do whatever he tells you.</string>
     <string name="luminous_2_fruit">Trust in Mary</string>
+    <string name="luminous_2_ref">Jn 2:1–5</string>
     <string name="luminous_3_title">The Proclamation of the Kingdom</string>
-    <string name="luminous_3_desc">Jesus proclaims the Kingdom of God and calls to conversion.</string>
+    <string name="luminous_3_desc">The time is fulfilled, and the kingdom of God is at hand; repent, and believe in the gospel.</string>
     <string name="luminous_3_fruit">Conversion of heart</string>
+    <string name="luminous_3_ref">Mk 1:15</string>
     <string name="luminous_4_title">The Transfiguration</string>
-    <string name="luminous_4_desc">Jesus is transfigured on Mount Tabor.</string>
+    <string name="luminous_4_desc">And after six days Jesus took with him Peter and James and John his brother, and led them up a high mountain apart. And his face shone like the sun.</string>
     <string name="luminous_4_fruit">Desire for holiness</string>
+    <string name="luminous_4_ref">Mt 17:1–2</string>
     <string name="luminous_5_title">The Institution of the Eucharist</string>
-    <string name="luminous_5_desc">Jesus institutes the Eucharist at the Last Supper.</string>
+    <string name="luminous_5_desc">Now as they were eating, Jesus took bread, and blessed, and broke it, and gave it to the disciples and said: Take, eat; this is my body.</string>
     <string name="luminous_5_fruit">Love of the Eucharist</string>
+    <string name="luminous_5_ref">Mt 26:26</string>
 </resources>
