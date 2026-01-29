@@ -15,7 +15,7 @@ object Routes {
     const val SETTINGS = "settings"
 }
 
-private const val KOFI_URL = "https://ko-fi.com/rosarymysteries"
+private const val KOFI_URL = "https://ko-fi.com/corentin_r"
 
 @Composable
 fun RosaryNavigation() {
