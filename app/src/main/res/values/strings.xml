@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rosary Mysteries</string>
+    <string name="settings">Settings</string>
+    <string name="language">Language</string>
+    <string name="back">Back</string>
+    <string name="support">Support</string>
+    <string name="today_mysteries">Today\'s Mysteries</string>
+
+    <!-- Mystery Types -->
+    <string name="joyful_mysteries">Joyful Mysteries</string>
+    <string name="sorrowful_mysteries">Sorrowful Mysteries</string>
+    <string name="glorious_mysteries">Glorious Mysteries</string>
+    <string name="luminous_mysteries">Luminous Mysteries</string>
+
+    <!-- Joyful Mysteries -->
+    <string name="joyful_1_title">The Annunciation</string>
+    <string name="joyful_1_desc">The Angel Gabriel announces to Mary that she will conceive the Son of God.</string>
+    <string name="joyful_2_title">The Visitation</string>
+    <string name="joyful_2_desc">Mary visits her cousin Elizabeth, who is pregnant with John the Baptist.</string>
+    <string name="joyful_3_title">The Nativity</string>
+    <string name="joyful_3_desc">Jesus is born in Bethlehem.</string>
+    <string name="joyful_4_title">The Presentation</string>
+    <string name="joyful_4_desc">Mary and Joseph present Jesus in the Temple.</string>
+    <string name="joyful_5_title">Finding in the Temple</string>
+    <string name="joyful_5_desc">Mary and Joseph find Jesus teaching in the Temple.</string>
+
+    <!-- Sorrowful Mysteries -->
+    <string name="sorrowful_1_title">The Agony in the Garden</string>
+    <string name="sorrowful_1_desc">Jesus prays in the Garden of Gethsemane.</string>
+    <string name="sorrowful_2_title">The Scourging at the Pillar</string>
+    <string name="sorrowful_2_desc">Jesus is scourged by the Roman soldiers.</string>
+    <string name="sorrowful_3_title">The Crowning with Thorns</string>
+    <string name="sorrowful_3_desc">Jesus is crowned with thorns and mocked.</string>
+    <string name="sorrowful_4_title">The Carrying of the Cross</string>
+    <string name="sorrowful_4_desc">Jesus carries His cross to Calvary.</string>
+    <string name="sorrowful_5_title">The Crucifixion</string>
+    <string name="sorrowful_5_desc">Jesus dies on the cross for our salvation.</string>
+
+    <!-- Glorious Mysteries -->
+    <string name="glorious_1_title">The Resurrection</string>
+    <string name="glorious_1_desc">Jesus rises from the dead on the third day.</string>
+    <string name="glorious_2_title">The Ascension</string>
+    <string name="glorious_2_desc">Jesus ascends into Heaven.</string>
+    <string name="glorious_3_title">The Descent of the Holy Spirit</string>
+    <string name="glorious_3_desc">The Holy Spirit descends upon the Apostles at Pentecost.</string>
+    <string name="glorious_4_title">The Assumption</string>
+    <string name="glorious_4_desc">Mary is assumed body and soul into Heaven.</string>
+    <string name="glorious_5_title">The Coronation</string>
+    <string name="glorious_5_desc">Mary is crowned Queen of Heaven and Earth.</string>
+
+    <!-- Luminous Mysteries -->
+    <string name="luminous_1_title">The Baptism in the Jordan</string>
+    <string name="luminous_1_desc">Jesus is baptized by John in the River Jordan.</string>
+    <string name="luminous_2_title">The Wedding at Cana</string>
+    <string name="luminous_2_desc">Jesus performs His first miracle at the wedding feast.</string>
+    <string name="luminous_3_title">The Proclamation of the Kingdom</string>
+    <string name="luminous_3_desc">Jesus proclaims the Kingdom of God and calls to conversion.</string>
+    <string name="luminous_4_title">The Transfiguration</string>
+    <string name="luminous_4_desc">Jesus is transfigured on Mount Tabor.</string>
+    <string name="luminous_5_title">The Institution of the Eucharist</string>
+    <string name="luminous_5_desc">Jesus institutes the Eucharist at the Last Supper.</string>
+</resources>
