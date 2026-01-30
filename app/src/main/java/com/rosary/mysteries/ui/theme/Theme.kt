@@ -44,9 +44,12 @@ private val Umber = Color(0xFF6B5344)
 private val PaleGold = Color(0xFFF5E6C8)
 private val Vellum = Color(0xFFF0E6D8)
 
-private val NightSepia = Color(0xFF1A140F)
-private val DarkVellum = Color(0xFF2A221A)
-private val PaleText = Color(0xFFE8DED0)
+private val Obsidian = Color(0xFF0F0D0B)
+private val DarkLeather = Color(0xFF1C1714)
+private val Candlelight = Color(0xFFEAC87C)
+private val AntiqueCream = Color(0xFFE5D9C9)
+private val WarmAmber = Color(0xFFCFB896)
+private val Mahogany = Color(0xFF3D2E26)
 
 private val LightColorScheme = lightColorScheme(
     primary = Sepia,
@@ -65,19 +68,19 @@ private val LightColorScheme = lightColorScheme(
 )
 
 private val DarkColorScheme = darkColorScheme(
-    primary = PaleText,
-    onPrimary = NightSepia,
-    secondary = GoldLeaf,
-    onSecondary = NightSepia,
-    tertiary = Color(0xFF9A8A7A),
-    background = NightSepia,
-    onBackground = PaleText,
-    surface = DarkVellum,
-    onSurface = PaleText,
-    surfaceVariant = Color(0xFF3A2E24),
-    onSurfaceVariant = Color(0xFFBAAA9A),
-    outline = Color(0xFF5A4A3A),
-    outlineVariant = Color(0xFF4A3A2A)
+    primary = AntiqueCream,
+    onPrimary = Obsidian,
+    secondary = Candlelight,
+    onSecondary = Obsidian,
+    tertiary = WarmAmber,
+    background = Obsidian,
+    onBackground = AntiqueCream,
+    surface = DarkLeather,
+    onSurface = AntiqueCream,
+    surfaceVariant = Mahogany,
+    onSurfaceVariant = WarmAmber,
+    outline = Color(0xFF4A3D34),
+    outlineVariant = Color(0xFF2E2520)
 )
 
 private val AppTypography = Typography(
