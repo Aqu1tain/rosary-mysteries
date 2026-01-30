@@ -3,6 +3,10 @@
     <string name="app_name">Rosary Mysteries</string>
     <string name="settings">Settings</string>
     <string name="language">Language</string>
+    <string name="theme">Theme</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
     <string name="back">Back</string>
     <string name="support">Support</string>
     <string name="today_mysteries">Today</string>
@@ -11,11 +15,12 @@
     <string name="how_to_intro">The Rosary comprises twenty mysteries organized into four sets:</string>
     <string name="how_to_days">Joyful (Monday, Saturday) - Luminous (Thursday) - Sorrowful (Tuesday, Friday) - Glorious (Wednesday, Sunday)</string>
     <string name="how_to_begin_title">Begin with</string>
-    <string name="how_to_begin">In the name of the Father and of the Son and of the Holy Spirit. Amen.\n\nGod come to my aid. Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</string>
+    <string name="how_to_begin">In the name of the Father and of the Son and of the Holy Spirit.\n\nO God, come to my aid. O Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</string>
     <string name="how_to_decade_title">For each decade</string>
     <string name="how_to_decade">1. Announce the mystery\n2. Meditate on that event\n3. Recite one Our Father\n4. Recite ten Hail Marys\n5. Recite one Glory Be</string>
     <string name="how_to_closing_title">Closing</string>
     <string name="how_to_closing">At the conclusion, one may recite the Litanies of Loreto or another Marian prayer.</string>
+    <string name="fruit_prefix">Fruit of the mystery:</string>
 
     <string name="joyful_mysteries">Joyful Mysteries</string>
     <string name="sorrowful_mysteries">Sorrowful Mysteries</string>
@@ -44,30 +49,30 @@
     <string name="joyful_5_ref">Lk 2:41–47</string>
 
     <string name="sorrowful_1_title">The Agony in the Garden</string>
-    <string name="sorrowful_1_desc">Going a little farther he fell on his face and prayed: My Father, if it be possible, let this cup pass from me; nevertheless, not as I will, but as you will.</string>
+    <string name="sorrowful_1_desc">My Father, if it be possible, let this cup pass from me; nevertheless, not as I will, but as you will.</string>
     <string name="sorrowful_1_fruit">Contrition for sins</string>
     <string name="sorrowful_1_ref">Mt 26:36–39</string>
     <string name="sorrowful_2_title">The Scourging at the Pillar</string>
-    <string name="sorrowful_2_desc">Then Pilate took Jesus and scourged him.</string>
+    <string name="sorrowful_2_desc">Then Pilate released Barabbas to them; and after having Jesus scourged, he delivered him to be crucified.</string>
     <string name="sorrowful_2_fruit">Mortification of the senses</string>
     <string name="sorrowful_2_ref">Mt 27:26</string>
     <string name="sorrowful_3_title">The Crowning with Thorns</string>
-    <string name="sorrowful_3_desc">And plaiting a crown of thorns they put it on his head, and put a reed in his right hand. And kneeling before him they mocked him.</string>
+    <string name="sorrowful_3_desc">And plaiting a crown of thorns they put it on his head, and put a reed in his right hand.</string>
     <string name="sorrowful_3_fruit">Contempt of the world</string>
     <string name="sorrowful_3_ref">Mt 27:27–29</string>
     <string name="sorrowful_4_title">The Carrying of the Cross</string>
-    <string name="sorrowful_4_desc">And they compelled a passer-by, Simon of Cyrene, to carry his cross. And they brought him to the place called Golgotha.</string>
+    <string name="sorrowful_4_desc">And they compelled a passer-by, Simon of Cyrene, to carry his cross.</string>
     <string name="sorrowful_4_fruit">Patience in trials</string>
     <string name="sorrowful_4_ref">Mk 15:21–22</string>
     <string name="sorrowful_5_title">The Crucifixion</string>
-    <string name="sorrowful_5_desc">And Jesus said: Father, forgive them; for they know not what they do. Then Jesus, crying with a loud voice, said: Father, into your hands I commit my spirit.</string>
+    <string name="sorrowful_5_desc">Father, into your hands I commit my spirit.</string>
     <string name="sorrowful_5_fruit">Forgiveness of injuries</string>
-    <string name="sorrowful_5_ref">Lk 23:33–46</string>
+    <string name="sorrowful_5_ref">Lk 23:44–46</string>
 
     <string name="glorious_1_title">The Resurrection</string>
-    <string name="glorious_1_desc">Why do you seek the living among the dead? He is not here, but has risen.</string>
+    <string name="glorious_1_desc">He is not here, for he has risen.</string>
     <string name="glorious_1_fruit">Faith</string>
-    <string name="glorious_1_ref">Lk 24:1–5</string>
+    <string name="glorious_1_ref">Lk 24:1–6</string>
     <string name="glorious_2_title">The Ascension</string>
     <string name="glorious_2_desc">The Lord Jesus, after he had spoken to them, was taken up into heaven, and sat down at the right hand of God.</string>
     <string name="glorious_2_fruit">Hope and desire for Heaven</string>
@@ -86,11 +91,11 @@
     <string name="glorious_5_ref">Rev 12:1</string>
 
     <string name="luminous_1_title">The Baptism in the Jordan</string>
-    <string name="luminous_1_desc">And when Jesus was baptized, he went up immediately from the water, and behold, the heavens were opened and he saw the Spirit of God descending like a dove.</string>
+    <string name="luminous_1_desc">When Jesus was baptized, he went up immediately from the water, and behold, the heavens were opened and he saw the Spirit of God descending like a dove.</string>
     <string name="luminous_1_fruit">Fidelity to baptismal promises</string>
     <string name="luminous_1_ref">Mt 3:16–17</string>
     <string name="luminous_2_title">The Wedding at Cana</string>
-    <string name="luminous_2_desc">On the third day there was a marriage at Cana in Galilee, and the mother of Jesus was there. His mother said to the servants: Do whatever he tells you.</string>
+    <string name="luminous_2_desc">When the wine ran out, the mother of Jesus said to him: They have no wine.</string>
     <string name="luminous_2_fruit">Trust in Mary</string>
     <string name="luminous_2_ref">Jn 2:1–5</string>
     <string name="luminous_3_title">The Proclamation of the Kingdom</string>
@@ -98,11 +103,11 @@
     <string name="luminous_3_fruit">Conversion of heart</string>
     <string name="luminous_3_ref">Mk 1:15</string>
     <string name="luminous_4_title">The Transfiguration</string>
-    <string name="luminous_4_desc">And after six days Jesus took with him Peter and James and John his brother, and led them up a high mountain apart. And his face shone like the sun.</string>
+    <string name="luminous_4_desc">His face shone like the sun, and his garments became white as light.</string>
     <string name="luminous_4_fruit">Desire for holiness</string>
     <string name="luminous_4_ref">Mt 17:1–2</string>
     <string name="luminous_5_title">The Institution of the Eucharist</string>
-    <string name="luminous_5_desc">Now as they were eating, Jesus took bread, and blessed, and broke it, and gave it to the disciples and said: Take, eat; this is my body.</string>
+    <string name="luminous_5_desc">Jesus took bread, and blessed, and broke it, and gave it to the disciples and said: Take, eat; this is my body.</string>
     <string name="luminous_5_fruit">Love of the Eucharist</string>
     <string name="luminous_5_ref">Mt 26:26</string>
 </resources>
