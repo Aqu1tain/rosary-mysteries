@@ -12,6 +12,15 @@
     <string name="today_mysteries">Oggi</string>
     <string name="menu">Menu</string>
     <string name="how_to_pray">Come recitare il Rosario</string>
+    <string name="prayers">Preghiere</string>
+    <string name="our_father_title">Padre Nostro</string>
+    <string name="our_father_text">Padre nostro, che sei nei cieli, sia santificato il tuo nome, venga il tuo regno, sia fatta la tua volontà, come in cielo così in terra. Dacci oggi il nostro pane quotidiano, e rimetti a noi i nostri debiti come anche noi li rimettiamo ai nostri debitori, e non abbandonarci alla tentazione, ma liberaci dal male. Amen.</string>
+    <string name="hail_mary_title">Ave Maria</string>
+    <string name="hail_mary_text">Ave, o Maria, piena di grazia, il Signore è con te. Tu sei benedetta fra le donne e benedetto è il frutto del tuo seno, Gesù. Santa Maria, Madre di Dio, prega per noi peccatori, adesso e nell\'ora della nostra morte. Amen.</string>
+    <string name="glory_be_title">Gloria</string>
+    <string name="glory_be_text">Gloria al Padre e al Figlio e allo Spirito Santo. Come era nel principio, e ora e sempre, nei secoli dei secoli. Amen.</string>
+    <string name="fatima_prayer_title">Preghiera di Fatima</string>
+    <string name="fatima_prayer_text">Gesù mio, perdona le nostre colpe, preservaci dal fuoco dell\'inferno, porta in cielo tutte le anime, specialmente le più bisognose della tua misericordia. Amen.</string>
     <string name="how_to_intro">Il Rosario comprende venti misteri organizzati in quattro serie:</string>
     <string name="how_to_days">Gaudiosi (lunedì, sabato) - Luminosi (giovedì) - Dolorosi (martedì, venerdì) - Gloriosi (mercoledì, domenica)</string>
     <string name="how_to_begin_title">Iniziare con</string>

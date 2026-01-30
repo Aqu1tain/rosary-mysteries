@@ -6,12 +6,14 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.rosary.mysteries.ui.screens.HomeScreen
 import com.rosary.mysteries.ui.screens.HowToScreen
+import com.rosary.mysteries.ui.screens.PrayersScreen
 import com.rosary.mysteries.ui.screens.SettingsScreen
 
 object Routes {
     const val HOME = "home"
     const val SETTINGS = "settings"
     const val HOW_TO = "how_to"
+    const val PRAYERS = "prayers"
 }
 
 @Composable
@@ -22,7 +24,8 @@ fun RosaryNavigation() {
         composable(Routes.HOME) {
             HomeScreen(
                 onSettingsClick = { navController.navigate(Routes.SETTINGS) },
-                onHowToClick = { navController.navigate(Routes.HOW_TO) }
+                onHowToClick = { navController.navigate(Routes.HOW_TO) },
+                onPrayersClick = { navController.navigate(Routes.PRAYERS) }
             )
         }
 
@@ -32,6 +35,10 @@ fun RosaryNavigation() {
 
         composable(Routes.HOW_TO) {
             HowToScreen(onBack = { navController.popBackStack() })
+        }
+
+        composable(Routes.PRAYERS) {
+            PrayersScreen(onBack = { navController.popBackStack() })
         }
     }
 }
