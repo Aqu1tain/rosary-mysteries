@@ -4,12 +4,12 @@ import android.content.Intent
 import android.net.Uri
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.slideInVertically
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -32,6 +32,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
@@ -53,7 +55,13 @@ private const val DEFAULT_BIBLE_VERSION = 59
 @Composable
 fun MysteryCard(mystery: Mystery, index: Int = 0, modifier: Modifier = Modifier) {
     var visible by remember { mutableStateOf(false) }
+    var pressed by remember { mutableStateOf(false) }
     val context = LocalContext.current
+    val scale by animateFloatAsState(
+        targetValue = if (pressed) 0.97f else 1f,
+        animationSpec = spring(stiffness = Spring.StiffnessMediumLow),
+        label = "scale"
+    )
 
     LaunchedEffect(mystery) {
         delay(index * 80L)
@@ -68,14 +76,17 @@ fun MysteryCard(mystery: Mystery, index: Int = 0, modifier: Modifier = Modifier)
         Column(
             modifier = modifier
                 .fillMaxWidth()
+                .graphicsLayer { scaleX = scale; scaleY = scale }
                 .clip(RoundedCornerShape(12.dp))
-                .clickable(
-                    interactionSource = remember { MutableInteractionSource() },
-                    indication = null
-                ) {
-                    val versionId = bibleVersions[Locale.getDefault().language] ?: DEFAULT_BIBLE_VERSION
-                    val url = "https://www.bible.com/bible/$versionId/${mystery.bibleRef}"
-                    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+                .pointerInput(mystery) {
+                    detectTapGestures(
+                        onPress = {
+                            pressed = true
+                            tryAwaitRelease()
+                            pressed = false
+                        },
+                        onTap = { openBiblePassage(context, mystery.bibleRef) }
+                    )
                 }
                 .padding(vertical = 20.dp)
         ) {
@@ -146,4 +157,10 @@ private fun NumberBadge(number: Int) {
             color = MaterialTheme.colorScheme.secondary
         )
     }
+}
+
+private fun openBiblePassage(context: android.content.Context, bibleRef: String) {
+    val versionId = bibleVersions[Locale.getDefault().language] ?: DEFAULT_BIBLE_VERSION
+    val url = "https://www.bible.com/bible/$versionId/$bibleRef"
+    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
 }
