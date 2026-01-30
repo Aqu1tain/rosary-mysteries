@@ -12,6 +12,15 @@
     <string name="today_mysteries">Today</string>
     <string name="menu">Menu</string>
     <string name="how_to_pray">How to pray the Rosary</string>
+    <string name="prayers">Prayers</string>
+    <string name="our_father_title">Our Father</string>
+    <string name="our_father_text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come, thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</string>
+    <string name="hail_mary_title">Hail Mary</string>
+    <string name="hail_mary_text">Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</string>
+    <string name="glory_be_title">Glory Be</string>
+    <string name="glory_be_text">Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</string>
+    <string name="fatima_prayer_title">Fatima Prayer</string>
+    <string name="fatima_prayer_text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to Heaven, especially those most in need of Thy mercy. Amen.</string>
     <string name="how_to_intro">The Rosary comprises twenty mysteries organized into four sets:</string>
     <string name="how_to_days">Joyful (Monday, Saturday) - Luminous (Thursday) - Sorrowful (Tuesday, Friday) - Glorious (Wednesday, Sunday)</string>
     <string name="how_to_begin_title">Begin with</string>

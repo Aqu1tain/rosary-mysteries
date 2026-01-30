@@ -57,6 +57,7 @@ import com.composables.icons.lucide.BookOpen
 import com.composables.icons.lucide.Heart
 import com.composables.icons.lucide.Lucide
 import com.composables.icons.lucide.Menu
+import com.composables.icons.lucide.ScrollText
 import com.composables.icons.lucide.Settings
 import com.rosary.mysteries.R
 import com.rosary.mysteries.data.MysteriesRepository
@@ -70,7 +71,8 @@ private const val KOFI_URL = "https://ko-fi.com/corentin_r"
 @Composable
 fun HomeScreen(
     onSettingsClick: () -> Unit,
-    onHowToClick: () -> Unit
+    onHowToClick: () -> Unit,
+    onPrayersClick: () -> Unit
 ) {
     val allMysteries = remember { MysteriesRepository.getAll() }
     val todayType = remember { MysteryType.today() }
@@ -93,6 +95,10 @@ fun HomeScreen(
                 onHowToClick = {
                     scope.launch { drawerState.close() }
                     onHowToClick()
+                },
+                onPrayersClick = {
+                    scope.launch { drawerState.close() }
+                    onPrayersClick()
                 },
                 onSettingsClick = {
                     scope.launch { drawerState.close() }
@@ -182,6 +188,7 @@ private fun DrawerContent(
     todayType: MysteryType,
     onMysterySelect: (MysterySet) -> Unit,
     onHowToClick: () -> Unit,
+    onPrayersClick: () -> Unit,
     onSettingsClick: () -> Unit,
     onSupportClick: () -> Unit
 ) {
@@ -225,6 +232,12 @@ private fun DrawerContent(
             icon = { Icon(Lucide.BookOpen, contentDescription = null, tint = MaterialTheme.colorScheme.tertiary, modifier = Modifier.size(20.dp)) },
             title = stringResource(R.string.how_to_pray),
             onClick = onHowToClick
+        )
+
+        DrawerIconItem(
+            icon = { Icon(Lucide.ScrollText, contentDescription = null, tint = MaterialTheme.colorScheme.tertiary, modifier = Modifier.size(20.dp)) },
+            title = stringResource(R.string.prayers),
+            onClick = onPrayersClick
         )
 
         Spacer(modifier = Modifier.weight(1f))

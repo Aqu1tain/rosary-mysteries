@@ -12,6 +12,15 @@
     <string name="today_mysteries">Aujourd\'hui</string>
     <string name="menu">Menu</string>
     <string name="how_to_pray">Comment réciter le chapelet</string>
+    <string name="prayers">Prières</string>
+    <string name="our_father_title">Notre Père</string>
+    <string name="our_father_text">Notre Père, qui es aux cieux, que ton nom soit sanctifié, que ton règne vienne, que ta volonté soit faite sur la terre comme au ciel. Donne-nous aujourd\'hui notre pain de ce jour. Pardonne-nous nos offenses, comme nous pardonnons aussi à ceux qui nous ont offensés. Et ne nous laisse pas entrer en tentation mais délivre-nous du Mal. Amen.</string>
+    <string name="hail_mary_title">Je vous salue Marie</string>
+    <string name="hail_mary_text">Je vous salue, Marie, pleine de grâce ; le Seigneur est avec vous. Vous êtes bénie entre toutes les femmes et Jésus, le fruit de vos entrailles, est béni. Sainte Marie, Mère de Dieu, priez pour nous, pauvres pécheurs, maintenant et à l\'heure de notre mort. Amen.</string>
+    <string name="glory_be_title">Gloire au Père</string>
+    <string name="glory_be_text">Gloire au Père et au Fils et au Saint-Esprit. Comme il était au commencement, maintenant et toujours, pour les siècles des siècles. Amen.</string>
+    <string name="fatima_prayer_title">Prière de Fatima</string>
+    <string name="fatima_prayer_text">Ô mon Jésus, pardonnez-nous nos péchés, préservez-nous du feu de l\'enfer, et conduisez au Ciel toutes les âmes, surtout celles qui ont le plus besoin de votre miséricorde. Amen.</string>
     <string name="how_to_intro">Le Rosaire comprend vingt mystères répartis en quatre séries :</string>
     <string name="how_to_days">Joyeux (lundi, samedi) - Lumineux (jeudi) - Douloureux (mardi, vendredi) - Glorieux (mercredi, dimanche)</string>
     <string name="how_to_begin_title">Commencer par</string>
