@@ -1,10 +1,5 @@
 package com.rosary.mysteries.ui.screens
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.core.Spring
-import androidx.compose.animation.core.spring
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.slideInVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -28,11 +23,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -42,7 +32,6 @@ import androidx.compose.ui.unit.sp
 import com.composables.icons.lucide.ArrowLeft
 import com.composables.icons.lucide.Lucide
 import com.rosary.mysteries.R
-import kotlinx.coroutines.delay
 
 @Composable
 fun HowToScreen(onBack: () -> Unit) {
@@ -90,59 +79,30 @@ private fun Content() {
             .verticalScroll(rememberScrollState())
             .padding(horizontal = 28.dp)
     ) {
-        AnimatedSection(index = 0) {
-            Text(
-                text = stringResource(R.string.how_to_intro),
-                style = MaterialTheme.typography.bodyLarge,
-                color = MaterialTheme.colorScheme.onBackground,
-                lineHeight = 26.sp
-            )
-            Spacer(modifier = Modifier.height(12.dp))
-            Text(
-                text = stringResource(R.string.how_to_days),
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.tertiary,
-                lineHeight = 22.sp
-            )
-        }
+        Text(
+            text = stringResource(R.string.how_to_intro),
+            style = MaterialTheme.typography.bodyLarge,
+            color = MaterialTheme.colorScheme.onBackground,
+            lineHeight = 26.sp
+        )
+        Spacer(modifier = Modifier.height(12.dp))
+        Text(
+            text = stringResource(R.string.how_to_days),
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.tertiary,
+            lineHeight = 22.sp
+        )
 
         SectionDivider()
-        AnimatedSection(index = 1) {
-            Section(stringResource(R.string.how_to_begin_title), stringResource(R.string.how_to_begin))
-        }
+        Section(stringResource(R.string.how_to_begin_title), stringResource(R.string.how_to_begin))
 
         SectionDivider()
-        AnimatedSection(index = 2) {
-            Section(stringResource(R.string.how_to_decade_title), stringResource(R.string.how_to_decade))
-        }
+        Section(stringResource(R.string.how_to_decade_title), stringResource(R.string.how_to_decade))
 
         SectionDivider()
-        AnimatedSection(index = 3) {
-            Section(stringResource(R.string.how_to_closing_title), stringResource(R.string.how_to_closing))
-        }
+        Section(stringResource(R.string.how_to_closing_title), stringResource(R.string.how_to_closing))
 
         Spacer(modifier = Modifier.height(48.dp))
-    }
-}
-
-@Composable
-private fun AnimatedSection(index: Int, content: @Composable () -> Unit) {
-    var visible by remember { mutableStateOf(false) }
-
-    LaunchedEffect(Unit) {
-        delay(index * 100L)
-        visible = true
-    }
-
-    AnimatedVisibility(
-        visible = visible,
-        enter = fadeIn(spring(stiffness = Spring.StiffnessLow)) +
-                slideInVertically(
-                    spring(stiffness = Spring.StiffnessLow),
-                    initialOffsetY = { it / 4 }
-                )
-    ) {
-        Column { content() }
     }
 }
 
