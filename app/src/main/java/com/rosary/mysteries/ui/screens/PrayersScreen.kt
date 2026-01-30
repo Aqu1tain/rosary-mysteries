@@ -1,10 +1,5 @@
 package com.rosary.mysteries.ui.screens
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.core.Spring
-import androidx.compose.animation.core.spring
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.slideInVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -28,11 +23,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -42,7 +32,6 @@ import androidx.compose.ui.unit.sp
 import com.composables.icons.lucide.ArrowLeft
 import com.composables.icons.lucide.Lucide
 import com.rosary.mysteries.R
-import kotlinx.coroutines.delay
 
 @Composable
 fun PrayersScreen(onBack: () -> Unit) {
@@ -90,32 +79,14 @@ private fun PrayersList() {
             .verticalScroll(rememberScrollState())
             .padding(horizontal = 28.dp)
     ) {
-        AnimatedPrayer(0, R.string.our_father_title, R.string.our_father_text)
+        PrayerCard(stringResource(R.string.our_father_title), stringResource(R.string.our_father_text))
         PrayerDivider()
-        AnimatedPrayer(1, R.string.hail_mary_title, R.string.hail_mary_text)
+        PrayerCard(stringResource(R.string.hail_mary_title), stringResource(R.string.hail_mary_text))
         PrayerDivider()
-        AnimatedPrayer(2, R.string.glory_be_title, R.string.glory_be_text)
+        PrayerCard(stringResource(R.string.glory_be_title), stringResource(R.string.glory_be_text))
         PrayerDivider()
-        AnimatedPrayer(3, R.string.fatima_prayer_title, R.string.fatima_prayer_text)
+        PrayerCard(stringResource(R.string.fatima_prayer_title), stringResource(R.string.fatima_prayer_text))
         Spacer(modifier = Modifier.height(48.dp))
-    }
-}
-
-@Composable
-private fun AnimatedPrayer(index: Int, titleRes: Int, textRes: Int) {
-    var visible by remember { mutableStateOf(false) }
-
-    LaunchedEffect(Unit) {
-        delay(index * 100L)
-        visible = true
-    }
-
-    AnimatedVisibility(
-        visible = visible,
-        enter = fadeIn(spring(stiffness = Spring.StiffnessLow)) +
-                slideInVertically(spring(stiffness = Spring.StiffnessLow)) { it / 4 }
-    ) {
-        PrayerCard(stringResource(titleRes), stringResource(textRes))
     }
 }
 

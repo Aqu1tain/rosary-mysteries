@@ -2,12 +2,9 @@ package com.rosary.mysteries.ui.components
 
 import android.content.Intent
 import android.net.Uri
-import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.slideInVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Box
@@ -24,7 +21,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -42,7 +38,6 @@ import androidx.compose.ui.unit.sp
 import com.rosary.mysteries.R
 import com.rosary.mysteries.domain.Mystery
 import com.rosary.mysteries.ui.theme.Lora
-import kotlinx.coroutines.delay
 import java.util.Locale
 
 private val bibleVersions = mapOf(
@@ -54,89 +49,77 @@ private const val DEFAULT_BIBLE_VERSION = 59
 
 @Composable
 fun MysteryCard(mystery: Mystery, index: Int = 0, modifier: Modifier = Modifier) {
-    var visible by remember { mutableStateOf(false) }
     var pressed by remember { mutableStateOf(false) }
     val context = LocalContext.current
     val scale by animateFloatAsState(
-        targetValue = if (pressed) 0.97f else 1f,
-        animationSpec = spring(stiffness = Spring.StiffnessMediumLow),
+        targetValue = if (pressed) 0.98f else 1f,
+        animationSpec = spring(stiffness = Spring.StiffnessMedium),
         label = "scale"
     )
 
-    LaunchedEffect(mystery) {
-        delay(index * 80L)
-        visible = true
-    }
-
-    AnimatedVisibility(
-        visible = visible,
-        enter = fadeIn(spring(stiffness = Spring.StiffnessLow)) +
-                slideInVertically(spring(stiffness = Spring.StiffnessLow)) { it / 4 }
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .graphicsLayer { scaleX = scale; scaleY = scale }
+            .clip(RoundedCornerShape(12.dp))
+            .pointerInput(mystery) {
+                detectTapGestures(
+                    onPress = {
+                        pressed = true
+                        tryAwaitRelease()
+                        pressed = false
+                    },
+                    onTap = { openBiblePassage(context, mystery.bibleRef) }
+                )
+            }
+            .padding(vertical = 20.dp)
     ) {
-        Column(
-            modifier = modifier
-                .fillMaxWidth()
-                .graphicsLayer { scaleX = scale; scaleY = scale }
-                .clip(RoundedCornerShape(12.dp))
-                .pointerInput(mystery) {
-                    detectTapGestures(
-                        onPress = {
-                            pressed = true
-                            tryAwaitRelease()
-                            pressed = false
-                        },
-                        onTap = { openBiblePassage(context, mystery.bibleRef) }
-                    )
-                }
-                .padding(vertical = 20.dp)
-        ) {
-            Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.Top) {
-                NumberBadge(mystery.number)
-                Spacer(Modifier.width(16.dp))
-                Column(Modifier.weight(1f)) {
-                    Text(
-                        text = stringResource(mystery.titleResId),
-                        style = MaterialTheme.typography.titleMedium,
-                        color = MaterialTheme.colorScheme.primary
-                    )
-                    Spacer(Modifier.height(2.dp))
-                    Text(
-                        text = stringResource(mystery.referenceResId),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.secondary,
-                        letterSpacing = 1.sp
-                    )
-                }
-            }
-
-            Spacer(Modifier.height(14.dp))
-
-            Text(
-                text = stringResource(mystery.descriptionResId),
-                style = MaterialTheme.typography.bodyLarge,
-                fontStyle = FontStyle.Italic,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                lineHeight = 26.sp,
-                modifier = Modifier.padding(start = 54.dp)
-            )
-
-            Spacer(Modifier.height(12.dp))
-
-            Row(Modifier.padding(start = 54.dp), verticalAlignment = Alignment.CenterVertically) {
-                Box(
-                    Modifier
-                        .size(6.dp)
-                        .clip(CircleShape)
-                        .background(MaterialTheme.colorScheme.secondary)
-                )
-                Spacer(Modifier.width(10.dp))
+        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.Top) {
+            NumberBadge(mystery.number)
+            Spacer(Modifier.width(16.dp))
+            Column(Modifier.weight(1f)) {
                 Text(
-                    text = "${stringResource(R.string.fruit_prefix)} ${stringResource(mystery.fruitResId)}",
-                    style = MaterialTheme.typography.labelMedium,
-                    color = MaterialTheme.colorScheme.tertiary,
-                    letterSpacing = 0.5.sp
+                    text = stringResource(mystery.titleResId),
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.primary
+                )
+                Spacer(Modifier.height(2.dp))
+                Text(
+                    text = stringResource(mystery.referenceResId),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.secondary,
+                    letterSpacing = 1.sp
                 )
             }
+        }
+
+        Spacer(Modifier.height(14.dp))
+
+        Text(
+            text = stringResource(mystery.descriptionResId),
+            style = MaterialTheme.typography.bodyLarge,
+            fontStyle = FontStyle.Italic,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            lineHeight = 26.sp,
+            modifier = Modifier.padding(start = 54.dp)
+        )
+
+        Spacer(Modifier.height(12.dp))
+
+        Row(Modifier.padding(start = 54.dp), verticalAlignment = Alignment.CenterVertically) {
+            Box(
+                Modifier
+                    .size(6.dp)
+                    .clip(CircleShape)
+                    .background(MaterialTheme.colorScheme.secondary)
+            )
+            Spacer(Modifier.width(10.dp))
+            Text(
+                text = "${stringResource(R.string.fruit_prefix)} ${stringResource(mystery.fruitResId)}",
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.tertiary,
+                letterSpacing = 0.5.sp
+            )
         }
     }
 }
