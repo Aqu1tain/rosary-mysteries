@@ -34,7 +34,7 @@ import com.composables.icons.lucide.Lucide
 import com.rosary.mysteries.R
 
 @Composable
-fun HowToScreen(onBack: () -> Unit) {
+fun PrayersScreen(onBack: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -42,7 +42,7 @@ fun HowToScreen(onBack: () -> Unit) {
             .windowInsetsPadding(WindowInsets.safeDrawing)
     ) {
         Header(onBack)
-        Content()
+        PrayersList()
     }
 }
 
@@ -64,7 +64,7 @@ private fun Header(onBack: () -> Unit) {
         }
         Spacer(modifier = Modifier.width(4.dp))
         Text(
-            text = stringResource(R.string.how_to_pray),
+            text = stringResource(R.string.prayers),
             style = MaterialTheme.typography.headlineSmall,
             color = MaterialTheme.colorScheme.primary
         )
@@ -72,69 +72,55 @@ private fun Header(onBack: () -> Unit) {
 }
 
 @Composable
-private fun Content() {
+private fun PrayersList() {
     Column(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
             .padding(horizontal = 28.dp)
     ) {
-        Text(
-            text = stringResource(R.string.how_to_intro),
-            style = MaterialTheme.typography.bodyLarge,
-            color = MaterialTheme.colorScheme.onBackground,
-            lineHeight = 26.sp
-        )
-        Spacer(modifier = Modifier.height(12.dp))
-        Text(
-            text = stringResource(R.string.how_to_days),
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.tertiary,
-            lineHeight = 22.sp
-        )
-
-        SectionDivider()
-        Section(stringResource(R.string.how_to_begin_title), stringResource(R.string.how_to_begin))
-
-        SectionDivider()
-        Section(stringResource(R.string.how_to_decade_title), stringResource(R.string.how_to_decade))
-
-        SectionDivider()
-        Section(stringResource(R.string.how_to_closing_title), stringResource(R.string.how_to_closing))
-
+        PrayerCard(stringResource(R.string.our_father_title), stringResource(R.string.our_father_text))
+        PrayerDivider()
+        PrayerCard(stringResource(R.string.hail_mary_title), stringResource(R.string.hail_mary_text))
+        PrayerDivider()
+        PrayerCard(stringResource(R.string.glory_be_title), stringResource(R.string.glory_be_text))
+        PrayerDivider()
+        PrayerCard(stringResource(R.string.fatima_prayer_title), stringResource(R.string.fatima_prayer_text))
         Spacer(modifier = Modifier.height(48.dp))
     }
 }
 
 @Composable
-private fun SectionDivider() {
-    Spacer(modifier = Modifier.height(24.dp))
-    HorizontalDivider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.4f))
-    Spacer(modifier = Modifier.height(24.dp))
+private fun PrayerCard(title: String, text: String) {
+    Column {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Box(
+                modifier = Modifier
+                    .size(8.dp)
+                    .clip(CircleShape)
+                    .background(MaterialTheme.colorScheme.secondary)
+            )
+            Spacer(modifier = Modifier.width(12.dp))
+            Text(
+                text = title,
+                style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.primary
+            )
+        }
+        Spacer(modifier = Modifier.height(14.dp))
+        Text(
+            text = text,
+            style = MaterialTheme.typography.bodyLarge,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            lineHeight = 26.sp,
+            modifier = Modifier.padding(start = 20.dp)
+        )
+    }
 }
 
 @Composable
-private fun Section(title: String, content: String) {
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        Box(
-            modifier = Modifier
-                .size(8.dp)
-                .clip(CircleShape)
-                .background(MaterialTheme.colorScheme.secondary)
-        )
-        Spacer(modifier = Modifier.width(12.dp))
-        Text(
-            text = title,
-            style = MaterialTheme.typography.titleMedium,
-            color = MaterialTheme.colorScheme.primary
-        )
-    }
-    Spacer(modifier = Modifier.height(14.dp))
-    Text(
-        text = content,
-        style = MaterialTheme.typography.bodyLarge,
-        color = MaterialTheme.colorScheme.onSurfaceVariant,
-        lineHeight = 26.sp,
-        modifier = Modifier.padding(start = 20.dp)
-    )
+private fun PrayerDivider() {
+    Spacer(modifier = Modifier.height(24.dp))
+    HorizontalDivider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.4f))
+    Spacer(modifier = Modifier.height(24.dp))
 }

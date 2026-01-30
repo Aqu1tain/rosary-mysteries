@@ -12,6 +12,15 @@
     <string name="today_mysteries">Hoy</string>
     <string name="menu">Menú</string>
     <string name="how_to_pray">Cómo rezar el Rosario</string>
+    <string name="prayers">Oraciones</string>
+    <string name="our_father_title">Padre Nuestro</string>
+    <string name="our_father_text">Padre nuestro, que estás en el cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad en la tierra como en el cielo. Danos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal. Amén.</string>
+    <string name="hail_mary_title">Ave María</string>
+    <string name="hail_mary_text">Dios te salve, María, llena eres de gracia, el Señor es contigo. Bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.</string>
+    <string name="glory_be_title">Gloria</string>
+    <string name="glory_be_text">Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.</string>
+    <string name="fatima_prayer_title">Oración de Fátima</string>
+    <string name="fatima_prayer_text">Oh Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno, lleva al cielo a todas las almas, especialmente a las más necesitadas de tu misericordia. Amén.</string>
     <string name="how_to_intro">El Rosario comprende veinte misterios organizados en cuatro series:</string>
     <string name="how_to_days">Gozosos (lunes, sábado) - Luminosos (jueves) - Dolorosos (martes, viernes) - Gloriosos (miércoles, domingo)</string>
     <string name="how_to_begin_title">Comenzar con</string>
@@ -21,6 +30,7 @@
     <string name="how_to_closing_title">Conclusión</string>
     <string name="how_to_closing">Al finalizar, se puede rezar las Letanías de Loreto u otra oración mariana.</string>
     <string name="fruit_prefix">Fruto del misterio:</string>
+    <string name="widget_description">Los misterios del Rosario de hoy</string>
 
     <string name="joyful_mysteries">Misterios Gozosos</string>
     <string name="sorrowful_mysteries">Misterios Dolorosos</string>
