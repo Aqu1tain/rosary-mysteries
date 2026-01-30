@@ -87,6 +87,9 @@ dependencies {
     implementation("androidx.datastore:datastore-preferences:1.1.2")
     implementation("androidx.core:core-splashscreen:1.0.1")
 
+    implementation("androidx.glance:glance-appwidget:1.1.1")
+    implementation("androidx.glance:glance-material3:1.1.1")
+
     implementation("com.composables:icons-lucide:1.0.0")
 
     debugImplementation("androidx.compose.ui:ui-tooling")
