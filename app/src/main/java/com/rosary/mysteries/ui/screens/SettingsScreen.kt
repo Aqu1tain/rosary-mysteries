@@ -5,8 +5,13 @@ import android.content.Context
 import android.os.Build
 import android.os.LocaleList
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -16,43 +21,55 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.windowInsetsPadding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.core.os.LocaleListCompat
 import com.composables.icons.lucide.ArrowLeft
 import com.composables.icons.lucide.Check
 import com.composables.icons.lucide.Lucide
 import com.rosary.mysteries.R
+import com.rosary.mysteries.data.ThemeMode
+import com.rosary.mysteries.data.rememberThemePreferences
+import kotlinx.coroutines.launch
 import java.util.Locale
 
-private data class Language(val code: String, val name: String)
-
-private val languages = listOf(
-    Language("en", "English"),
-    Language("fr", "Francais"),
-    Language("es", "Espanol"),
-    Language("it", "Italiano")
+private val languages = mapOf(
+    "en" to "English",
+    "fr" to "Français",
+    "es" to "Español",
+    "it" to "Italiano"
 )
 
 @Composable
 fun SettingsScreen(onBack: () -> Unit) {
     val context = LocalContext.current
     var currentLocale by remember { mutableStateOf(getCurrentLocale(context)) }
+    val themePreferences = rememberThemePreferences()
+    val currentTheme by themePreferences.themeMode.collectAsState(initial = ThemeMode.SYSTEM)
+    val scope = rememberCoroutineScope()
 
     Column(
         modifier = Modifier
@@ -60,82 +77,149 @@ fun SettingsScreen(onBack: () -> Unit) {
             .background(MaterialTheme.colorScheme.background)
             .windowInsetsPadding(WindowInsets.safeDrawing)
     ) {
-        Header(onBack)
-        LanguageSection(
-            currentLocale = currentLocale,
-            onLanguageSelect = { code ->
-                setLocale(context, code)
-                currentLocale = code
+        Header(stringResource(R.string.settings), onBack)
+
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 20.dp)
+        ) {
+            Spacer(Modifier.height(8.dp))
+
+            SettingsSection(stringResource(R.string.theme)) {
+                ThemeMode.entries.forEach { mode ->
+                    SelectableItem(
+                        label = stringResource(mode.labelRes),
+                        selected = currentTheme == mode,
+                        onClick = { scope.launch { themePreferences.setThemeMode(mode) } }
+                    )
+                }
             }
-        )
+
+            SectionDivider()
+
+            SettingsSection(stringResource(R.string.language)) {
+                languages.forEach { (code, name) ->
+                    SelectableItem(
+                        label = name,
+                        selected = currentLocale == code,
+                        onClick = {
+                            setLocale(context, code)
+                            currentLocale = code
+                        }
+                    )
+                }
+            }
+
+            Spacer(Modifier.height(32.dp))
+        }
     }
 }
 
+private val ThemeMode.labelRes: Int
+    get() = when (this) {
+        ThemeMode.SYSTEM -> R.string.theme_system
+        ThemeMode.LIGHT -> R.string.theme_light
+        ThemeMode.DARK -> R.string.theme_dark
+    }
+
 @Composable
-private fun Header(onBack: () -> Unit) {
+private fun Header(title: String, onBack: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 8.dp, vertical = 12.dp),
+            .padding(horizontal = 12.dp, vertical = 16.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         IconButton(onClick = onBack) {
             Icon(
                 Lucide.ArrowLeft,
                 contentDescription = stringResource(R.string.back),
-                tint = MaterialTheme.colorScheme.primary
+                tint = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.size(22.dp)
             )
         }
+        Spacer(Modifier.width(4.dp))
         Text(
-            text = stringResource(R.string.settings),
-            style = MaterialTheme.typography.titleLarge,
-            fontWeight = FontWeight.SemiBold,
+            text = title,
+            style = MaterialTheme.typography.headlineSmall,
             color = MaterialTheme.colorScheme.primary
         )
     }
 }
 
 @Composable
-private fun LanguageSection(currentLocale: String, onLanguageSelect: (String) -> Unit) {
+private fun SettingsSection(title: String, content: @Composable () -> Unit) {
     Column {
-        Text(
-            text = stringResource(R.string.language),
-            style = MaterialTheme.typography.titleMedium,
-            fontWeight = FontWeight.SemiBold,
-            color = MaterialTheme.colorScheme.primary,
-            modifier = Modifier.padding(horizontal = 24.dp, vertical = 12.dp)
-        )
-
-        languages.forEach { language ->
-            LanguageItem(
-                language = language,
-                isSelected = currentLocale == language.code,
-                onClick = { onLanguageSelect(language.code) }
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.padding(horizontal = 8.dp, vertical = 8.dp)
+        ) {
+            Box(
+                Modifier
+                    .size(8.dp)
+                    .clip(CircleShape)
+                    .background(MaterialTheme.colorScheme.secondary)
             )
-            HorizontalDivider(color = MaterialTheme.colorScheme.outline)
+            Spacer(Modifier.width(12.dp))
+            Text(
+                text = title,
+                style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.primary
+            )
         }
+        Spacer(Modifier.height(12.dp))
+        content()
     }
 }
 
 @Composable
-private fun LanguageItem(language: Language, isSelected: Boolean, onClick: () -> Unit) {
+private fun SectionDivider() {
+    Spacer(Modifier.height(24.dp))
+    HorizontalDivider(
+        color = MaterialTheme.colorScheme.outline.copy(alpha = 0.4f),
+        modifier = Modifier.padding(horizontal = 8.dp)
+    )
+    Spacer(Modifier.height(24.dp))
+}
+
+@Composable
+private fun SelectableItem(label: String, selected: Boolean, onClick: () -> Unit) {
+    val backgroundColor by animateColorAsState(
+        targetValue = if (selected) MaterialTheme.colorScheme.secondary.copy(alpha = 0.12f)
+        else MaterialTheme.colorScheme.surface,
+        animationSpec = spring(stiffness = Spring.StiffnessLow),
+        label = "bg"
+    )
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable(onClick = onClick)
-            .padding(horizontal = 24.dp, vertical = 16.dp),
+            .padding(vertical = 3.dp)
+            .clip(RoundedCornerShape(12.dp))
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+                onClick = onClick
+            )
+            .background(backgroundColor)
+            .padding(horizontal = 18.dp, vertical = 16.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
-            text = language.name,
+            text = label,
             style = MaterialTheme.typography.bodyLarge,
+            color = if (selected) MaterialTheme.colorScheme.secondary
+            else MaterialTheme.colorScheme.onSurface,
             modifier = Modifier.weight(1f)
         )
-        if (isSelected) {
+        if (selected) {
             Icon(
                 Lucide.Check,
                 contentDescription = null,
-                tint = MaterialTheme.colorScheme.secondary
+                tint = MaterialTheme.colorScheme.secondary,
+                modifier = Modifier.size(20.dp)
             )
         }
     }
@@ -145,10 +229,9 @@ private fun getCurrentLocale(context: Context): String {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
         val locales = context.getSystemService(LocaleManager::class.java)?.applicationLocales
         if (locales != null && !locales.isEmpty) return locales.get(0)?.language ?: Locale.getDefault().language
-    } else {
-        val locales = AppCompatDelegate.getApplicationLocales()
-        if (!locales.isEmpty) return locales.get(0)?.language ?: Locale.getDefault().language
     }
+    val locales = AppCompatDelegate.getApplicationLocales()
+    if (!locales.isEmpty) return locales.get(0)?.language ?: Locale.getDefault().language
     return Locale.getDefault().language
 }
 
