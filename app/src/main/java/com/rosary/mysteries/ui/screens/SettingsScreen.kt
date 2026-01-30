@@ -50,6 +50,7 @@ import androidx.core.os.LocaleListCompat
 import com.composables.icons.lucide.ArrowLeft
 import com.composables.icons.lucide.Check
 import com.composables.icons.lucide.Lucide
+import com.rosary.mysteries.BuildConfig
 import com.rosary.mysteries.R
 import com.rosary.mysteries.data.ThemeMode
 import com.rosary.mysteries.data.rememberThemePreferences
@@ -112,7 +113,16 @@ fun SettingsScreen(onBack: () -> Unit) {
                 }
             }
 
-            Spacer(Modifier.height(32.dp))
+            Spacer(Modifier.weight(1f))
+
+            Text(
+                text = "v${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})",
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.outline,
+                modifier = Modifier.align(Alignment.CenterHorizontally)
+            )
+
+            Spacer(Modifier.height(24.dp))
         }
     }
 }
