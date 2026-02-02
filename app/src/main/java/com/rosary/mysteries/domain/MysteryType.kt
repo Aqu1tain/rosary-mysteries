@@ -9,13 +9,14 @@ enum class MysteryType {
     LUMINOUS;
 
     companion object {
-        fun forDay(day: DayOfWeek): MysteryType = when (day) {
+        fun forDay(day: DayOfWeek, luminousEnabled: Boolean = true): MysteryType = when (day) {
             DayOfWeek.MONDAY, DayOfWeek.SATURDAY -> JOYFUL
             DayOfWeek.TUESDAY, DayOfWeek.FRIDAY -> SORROWFUL
             DayOfWeek.WEDNESDAY, DayOfWeek.SUNDAY -> GLORIOUS
-            DayOfWeek.THURSDAY -> LUMINOUS
+            DayOfWeek.THURSDAY -> if (luminousEnabled) LUMINOUS else JOYFUL
         }
 
-        fun today(): MysteryType = forDay(DayOfWeek.from(java.time.LocalDate.now()))
+        fun today(luminousEnabled: Boolean = true): MysteryType =
+            forDay(DayOfWeek.from(java.time.LocalDate.now()), luminousEnabled)
     }
 }
