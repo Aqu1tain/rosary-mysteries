@@ -3,6 +3,9 @@
     <string name="app_name">Misteri del Rosario</string>
     <string name="settings">Impostazioni</string>
     <string name="language">Lingua</string>
+    <string name="mysteries_section">Misteri</string>
+    <string name="luminous_enabled">Misteri Luminosi</string>
+    <string name="luminous_enabled_desc">Aggiunti da Giovanni Paolo II nel 2002. Se disabilitati, il giovedì usa i Misteri Gaudiosi.</string>
     <string name="theme">Tema</string>
     <string name="theme_system">Sistema</string>
     <string name="theme_light">Chiaro</string>

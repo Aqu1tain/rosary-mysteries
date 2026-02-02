@@ -38,6 +38,7 @@ import androidx.glance.text.TextAlign
 import androidx.glance.text.TextStyle
 import com.rosary.mysteries.MainActivity
 import com.rosary.mysteries.R
+import com.rosary.mysteries.data.AppPreferences
 import com.rosary.mysteries.data.MysteriesRepository
 import com.rosary.mysteries.domain.Mystery
 import androidx.compose.material3.darkColorScheme
@@ -95,7 +96,8 @@ class RosaryWidget : GlanceAppWidget() {
     )
 
     override suspend fun provideGlance(context: Context, id: GlanceId) {
-        val todaySet = MysteriesRepository.getToday()
+        val luminousEnabled = AppPreferences(context).getLuminousEnabledBlocking()
+        val todaySet = MysteriesRepository.getToday(luminousEnabled)
         val title = context.getString(todaySet.titleResId)
         val todayLabel = context.getString(R.string.today_mysteries)
 

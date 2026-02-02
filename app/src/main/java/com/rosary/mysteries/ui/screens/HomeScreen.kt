@@ -8,6 +8,7 @@ import androidx.compose.animation.core.spring
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.togetherWith
+import androidx.compose.runtime.collectAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -61,6 +62,7 @@ import com.composables.icons.lucide.ScrollText
 import com.composables.icons.lucide.Settings
 import com.rosary.mysteries.R
 import com.rosary.mysteries.data.MysteriesRepository
+import com.rosary.mysteries.data.rememberAppPreferences
 import com.rosary.mysteries.domain.MysterySet
 import com.rosary.mysteries.domain.MysteryType
 import com.rosary.mysteries.ui.components.MysteryCard
@@ -74,9 +76,11 @@ fun HomeScreen(
     onHowToClick: () -> Unit,
     onPrayersClick: () -> Unit
 ) {
-    val allMysteries = remember { MysteriesRepository.getAll() }
-    val todayType = remember { MysteryType.today() }
-    var selectedSet by remember { mutableStateOf(MysteriesRepository.getToday()) }
+    val appPreferences = rememberAppPreferences()
+    val luminousEnabled by appPreferences.luminousEnabled.collectAsState(initial = true)
+    val allMysteries = remember(luminousEnabled) { MysteriesRepository.getAll(luminousEnabled) }
+    val todayType = remember(luminousEnabled) { MysteryType.today(luminousEnabled) }
+    var selectedSet by remember(luminousEnabled) { mutableStateOf(MysteriesRepository.getToday(luminousEnabled)) }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val scope = rememberCoroutineScope()
     val context = LocalContext.current

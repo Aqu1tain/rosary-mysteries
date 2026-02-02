@@ -3,6 +3,9 @@
     <string name="app_name">Mystères du Rosaire</string>
     <string name="settings">Paramètres</string>
     <string name="language">Langue</string>
+    <string name="mysteries_section">Mystères</string>
+    <string name="luminous_enabled">Mystères Lumineux</string>
+    <string name="luminous_enabled_desc">Ajoutés par Jean-Paul II en 2002. Si désactivés, le jeudi utilise les Mystères Joyeux.</string>
     <string name="theme">Thème</string>
     <string name="theme_system">Système</string>
     <string name="theme_light">Clair</string>
