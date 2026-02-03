@@ -23,15 +23,18 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.composables.icons.lucide.ArrowLeft
 import com.composables.icons.lucide.Lucide
 import com.rosary.mysteries.R
+import java.util.Locale
 
 @Composable
 fun PrayersScreen(onBack: () -> Unit) {
@@ -73,12 +76,21 @@ private fun Header(onBack: () -> Unit) {
 
 @Composable
 private fun PrayersList() {
+    val locale = remember { Locale.getDefault().language }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
             .padding(horizontal = 28.dp)
     ) {
+        if (locale == "es") {
+            PrayerCard(stringResource(R.string.sign_of_cross_title), stringResource(R.string.sign_of_cross_text))
+            PrayerDivider()
+        }
+
+        PrayerCard(stringResource(R.string.apostles_creed_title), stringResource(R.string.apostles_creed_text))
+        PrayerDivider()
         PrayerCard(stringResource(R.string.our_father_title), stringResource(R.string.our_father_text))
         PrayerDivider()
         PrayerCard(stringResource(R.string.hail_mary_title), stringResource(R.string.hail_mary_text))
@@ -86,6 +98,30 @@ private fun PrayersList() {
         PrayerCard(stringResource(R.string.glory_be_title), stringResource(R.string.glory_be_text))
         PrayerDivider()
         PrayerCard(stringResource(R.string.fatima_prayer_title), stringResource(R.string.fatima_prayer_text))
+        PrayerDivider()
+
+        if (locale == "es") {
+            PrayerCard(stringResource(R.string.maria_madre_title), stringResource(R.string.maria_madre_text))
+            PrayerDivider()
+        }
+
+        if (locale == "it") {
+            PrayerCard(stringResource(R.string.maria_regina_title), stringResource(R.string.maria_regina_text))
+            PrayerDivider()
+        }
+
+        PrayerCard(stringResource(R.string.hail_holy_queen_title), stringResource(R.string.hail_holy_queen_text))
+
+        if (locale == "en") {
+            PrayerDivider()
+            PrayerCard(stringResource(R.string.closing_prayer_title), stringResource(R.string.closing_prayer_text))
+        }
+
+        if (locale == "it") {
+            PrayerDivider()
+            PrayerCard(stringResource(R.string.st_michael_title), stringResource(R.string.st_michael_text))
+        }
+
         Spacer(modifier = Modifier.height(48.dp))
     }
 }

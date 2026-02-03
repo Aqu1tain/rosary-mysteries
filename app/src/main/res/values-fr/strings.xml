@@ -24,16 +24,20 @@
     <string name="glory_be_text">Gloire au Père et au Fils et au Saint-Esprit. Comme il était au commencement, maintenant et toujours, pour les siècles des siècles. Amen.</string>
     <string name="fatima_prayer_title">Prière de Fatima</string>
     <string name="fatima_prayer_text">Ô mon Jésus, pardonnez-nous nos péchés, préservez-nous du feu de l\'enfer, et conduisez au Ciel toutes les âmes, surtout celles qui ont le plus besoin de votre miséricorde. Amen.</string>
+    <string name="apostles_creed_title">Symbole des Apôtres</string>
+    <string name="apostles_creed_text">Je crois en Dieu, le Père tout-puissant, Créateur du ciel et de la terre. Et en Jésus Christ, son Fils unique, notre Seigneur ; qui a été conçu du Saint-Esprit, est né de la Vierge Marie, a souffert sous Ponce Pilate, a été crucifié, est mort et a été enseveli, est descendu aux enfers ; le troisième jour est ressuscité des morts, est monté aux cieux, est assis à la droite de Dieu le Père tout-puissant, d\'où il viendra juger les vivants et les morts. Je crois en l\'Esprit Saint, à la sainte Église catholique, à la communion des saints, à la rémission des péchés, à la résurrection de la chair, à la vie éternelle. Amen.</string>
+    <string name="hail_holy_queen_title">Salve Regina</string>
+    <string name="hail_holy_queen_text">Salut, ô Reine, Mère de miséricorde, notre vie, notre douceur, notre espérance, salut ! Enfants d\'Ève exilés, nous crions vers toi. Vers toi nous soupirons, gémissant et pleurant dans cette vallée de larmes. Ô toi, notre avocate, tourne vers nous ton regard miséricordieux. Et, après cet exil, montre-nous Jésus, le fruit béni de tes entrailles. Ô clémente, ô miséricordieuse, ô douce Vierge Marie.</string>
     <string name="how_to_intro">Le Rosaire comprend vingt mystères répartis en quatre séries :</string>
     <string name="how_to_intro_traditional">Le Rosaire comprend quinze mystères répartis en trois séries :</string>
     <string name="how_to_days">Joyeux (lundi, samedi) - Lumineux (jeudi) - Douloureux (mardi, vendredi) - Glorieux (mercredi, dimanche)</string>
     <string name="how_to_days_traditional">Joyeux (lundi, jeudi, samedi) - Douloureux (mardi, vendredi) - Glorieux (mercredi, dimanche)</string>
-    <string name="how_to_begin_title">Commencer par</string>
-    <string name="how_to_begin">Au nom du Père et du Fils et du Saint-Esprit.\n\nDieu, viens à mon aide. Seigneur, à notre secours.\n\nGloire au Père et au Fils et au Saint-Esprit, au Dieu qui est, qui était et qui vient, pour les siècles des siècles. Amen.</string>
+    <string name="how_to_begin_title">Ouverture</string>
+    <string name="how_to_begin">1. Signe de croix\n2. « Dieu, viens à mon aide. Seigneur, à notre secours. » + Gloire au Père\n3. Je crois en Dieu (Symbole des Apôtres)\n4. Notre Père\n5. Trois Je vous salue Marie — pour la foi, l\'espérance et la charité\n6. Gloire au Père</string>
     <string name="how_to_decade_title">Pour chaque dizaine</string>
-    <string name="how_to_decade">1. Annoncer le mystère\n2. Méditer sur cet événement\n3. Réciter un Notre Père\n4. Réciter dix Je vous salue Marie\n5. Réciter un Gloire au Père</string>
+    <string name="how_to_decade">1. Annonce du mystère + méditation\n2. Notre Père\n3. Dix Je vous salue Marie\n4. Gloire au Père\n5. Optionnel : prière de Fatima</string>
     <string name="how_to_closing_title">Conclusion</string>
-    <string name="how_to_closing">À la fin, on peut réciter les Litanies de Lorette ou une autre prière mariale.</string>
+    <string name="how_to_closing">1. Salve Regina (« Salut, ô Reine »)\n2. Optionnel : Litanies de Lorette\n3. Signe de croix</string>
     <string name="fruit_prefix">Fruit du mystère :</string>
     <string name="widget_description">Les mystères du Rosaire du jour</string>
 
