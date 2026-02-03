@@ -23,6 +23,8 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -32,6 +34,7 @@ import androidx.compose.ui.unit.sp
 import com.composables.icons.lucide.ArrowLeft
 import com.composables.icons.lucide.Lucide
 import com.rosary.mysteries.R
+import com.rosary.mysteries.data.rememberAppPreferences
 
 @Composable
 fun HowToScreen(onBack: () -> Unit) {
@@ -73,6 +76,11 @@ private fun Header(onBack: () -> Unit) {
 
 @Composable
 private fun Content() {
+    val appPreferences = rememberAppPreferences()
+    val luminousEnabled by appPreferences.luminousEnabled.collectAsState(initial = true)
+    val introRes = if (luminousEnabled) R.string.how_to_intro else R.string.how_to_intro_traditional
+    val daysRes = if (luminousEnabled) R.string.how_to_days else R.string.how_to_days_traditional
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -80,14 +88,14 @@ private fun Content() {
             .padding(horizontal = 28.dp)
     ) {
         Text(
-            text = stringResource(R.string.how_to_intro),
+            text = stringResource(introRes),
             style = MaterialTheme.typography.bodyLarge,
             color = MaterialTheme.colorScheme.onBackground,
             lineHeight = 26.sp
         )
         Spacer(modifier = Modifier.height(12.dp))
         Text(
-            text = stringResource(R.string.how_to_days),
+            text = stringResource(daysRes),
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.tertiary,
             lineHeight = 22.sp

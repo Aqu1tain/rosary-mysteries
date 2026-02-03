@@ -47,6 +47,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.core.os.LocaleListCompat
+import androidx.glance.appwidget.GlanceAppWidgetManager
 import com.composables.icons.lucide.ArrowLeft
 import com.composables.icons.lucide.Check
 import com.composables.icons.lucide.Lucide
@@ -54,6 +55,7 @@ import com.rosary.mysteries.BuildConfig
 import com.rosary.mysteries.R
 import com.rosary.mysteries.data.ThemeMode
 import com.rosary.mysteries.data.rememberAppPreferences
+import com.rosary.mysteries.widget.RosaryWidget
 import kotlinx.coroutines.launch
 import java.util.Locale
 
@@ -94,7 +96,12 @@ fun SettingsScreen(onBack: () -> Unit) {
                     label = stringResource(R.string.luminous_enabled),
                     description = stringResource(R.string.luminous_enabled_desc),
                     checked = luminousEnabled,
-                    onCheckedChange = { scope.launch { appPreferences.setLuminousEnabled(it) } }
+                    onCheckedChange = {
+                        scope.launch {
+                            appPreferences.setLuminousEnabled(it)
+                            updateWidgets(context)
+                        }
+                    }
                 )
             }
 
@@ -327,5 +334,13 @@ private fun setLocale(context: Context, languageCode: String) {
         context.getSystemService(LocaleManager::class.java)?.applicationLocales = LocaleList.forLanguageTags(languageCode)
     } else {
         AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(languageCode))
+    }
+}
+
+private suspend fun updateWidgets(context: Context) {
+    val manager = GlanceAppWidgetManager(context)
+    val widget = RosaryWidget()
+    manager.getGlanceIds(RosaryWidget::class.java).forEach { id ->
+        widget.update(context, id)
     }
 }
