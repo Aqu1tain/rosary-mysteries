@@ -28,12 +28,12 @@
     <string name="how_to_intro_traditional">Il Rosario comprende quindici misteri organizzati in tre serie:</string>
     <string name="how_to_days">Gaudiosi (lunedì, sabato) - Luminosi (giovedì) - Dolorosi (martedì, venerdì) - Gloriosi (mercoledì, domenica)</string>
     <string name="how_to_days_traditional">Gaudiosi (lunedì, giovedì, sabato) - Dolorosi (martedì, venerdì) - Gloriosi (mercoledì, domenica)</string>
-    <string name="how_to_begin_title">Iniziare con</string>
-    <string name="how_to_begin">Nel nome del Padre e del Figlio e dello Spirito Santo.\n\nO Dio, vieni a salvarmi. Signore, vieni presto in mio aiuto.\n\nGloria al Padre e al Figlio e allo Spirito Santo. Come era nel principio e ora e sempre, nei secoli dei secoli. Amen.</string>
+    <string name="how_to_begin_title">Apertura</string>
+    <string name="how_to_begin">1. Segno della Croce\n2. « O Dio, vieni a salvarmi. Signore, vieni presto in mio aiuto. » + Gloria\n3. Credo (spesso il Credo Niceno-Costantinopolitano)\n4. Padre Nostro\n5. Tre Ave Maria — per la fede, la speranza e la carità\n6. Gloria</string>
     <string name="how_to_decade_title">Per ogni decina</string>
-    <string name="how_to_decade">1. Annunciare il mistero\n2. Meditare su quell\'evento\n3. Recitare un Padre Nostro\n4. Recitare dieci Ave Maria\n5. Recitare un Gloria</string>
+    <string name="how_to_decade">1. Annuncio del mistero\n2. Padre Nostro\n3. Dieci Ave Maria\n4. Gloria\n5. Preghiera di Fatima\n6. « Maria Regina della Pace, prega per noi »</string>
     <string name="how_to_closing_title">Conclusione</string>
-    <string name="how_to_closing">Alla fine, si possono recitare le Litanie Lauretane o un\'altra preghiera mariana.</string>
+    <string name="how_to_closing">1. Salve Regina\n2. Litanie Lauretane\n3. Padre Nostro + Ave Maria + Gloria per il Papa e la Chiesa\n4. Opzionale: preghiera a San Michele Arcangelo\n5. Orazione finale\n6. Segno della Croce</string>
     <string name="fruit_prefix">Frutto del mistero:</string>
     <string name="widget_description">I misteri del Rosario di oggi</string>
 

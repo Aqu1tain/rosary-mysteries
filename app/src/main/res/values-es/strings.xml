@@ -28,12 +28,12 @@
     <string name="how_to_intro_traditional">El Rosario comprende quince misterios organizados en tres series:</string>
     <string name="how_to_days">Gozosos (lunes, sábado) - Luminosos (jueves) - Dolorosos (martes, viernes) - Gloriosos (miércoles, domingo)</string>
     <string name="how_to_days_traditional">Gozosos (lunes, jueves, sábado) - Dolorosos (martes, viernes) - Gloriosos (miércoles, domingo)</string>
-    <string name="how_to_begin_title">Comenzar con</string>
-    <string name="how_to_begin">En el nombre del Padre y del Hijo y del Espíritu Santo.\n\nDios mío, ven en mi auxilio. Señor, date prisa en socorrerme.\n\nGloria al Padre y al Hijo y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.</string>
+    <string name="how_to_begin_title">Apertura</string>
+    <string name="how_to_begin">1. « Por la señal de la Santa Cruz, de nuestros enemigos líbranos, Señor Dios nuestro »\n2. Señal de la Cruz\n3. Opcional: Acto de Contrición\n4. Credo (Símbolo de los Apóstoles)\n5. Padre Nuestro\n6. Tres Ave Marías — por la fe, la esperanza y la caridad\n7. Gloria</string>
     <string name="how_to_decade_title">Para cada decena</string>
-    <string name="how_to_decade">1. Anunciar el misterio\n2. Meditar sobre ese evento\n3. Rezar un Padre Nuestro\n4. Rezar diez Ave Marías\n5. Rezar un Gloria</string>
+    <string name="how_to_decade">1. Anuncio del misterio + meditación\n2. Padre Nuestro\n3. Diez Ave Marías\n4. Gloria\n5. « María, Madre de gracia, Madre de misericordia… »\n6. Oración de Fátima</string>
     <string name="how_to_closing_title">Conclusión</string>
-    <string name="how_to_closing">Al finalizar, se puede rezar las Letanías de Loreto u otra oración mariana.</string>
+    <string name="how_to_closing">1. Salve Regina (« Dios te salve, Reina… »)\n2. Letanías de Loreto\n3. « Ave María purísima, sin pecado concebida »\n4. Opcional: oración por las almas del Purgatorio\n5. Señal de la Cruz</string>
     <string name="fruit_prefix">Fruto del misterio:</string>
     <string name="widget_description">Los misterios del Rosario de hoy</string>
 

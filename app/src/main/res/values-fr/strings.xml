@@ -28,12 +28,12 @@
     <string name="how_to_intro_traditional">Le Rosaire comprend quinze mystères répartis en trois séries :</string>
     <string name="how_to_days">Joyeux (lundi, samedi) - Lumineux (jeudi) - Douloureux (mardi, vendredi) - Glorieux (mercredi, dimanche)</string>
     <string name="how_to_days_traditional">Joyeux (lundi, jeudi, samedi) - Douloureux (mardi, vendredi) - Glorieux (mercredi, dimanche)</string>
-    <string name="how_to_begin_title">Commencer par</string>
-    <string name="how_to_begin">Au nom du Père et du Fils et du Saint-Esprit.\n\nDieu, viens à mon aide. Seigneur, à notre secours.\n\nGloire au Père et au Fils et au Saint-Esprit, au Dieu qui est, qui était et qui vient, pour les siècles des siècles. Amen.</string>
+    <string name="how_to_begin_title">Ouverture</string>
+    <string name="how_to_begin">1. Signe de croix\n2. « Dieu, viens à mon aide. Seigneur, à notre secours. » + Gloire au Père\n3. Je crois en Dieu (Symbole des Apôtres)\n4. Notre Père\n5. Trois Je vous salue Marie — pour la foi, l\'espérance et la charité\n6. Gloire au Père</string>
     <string name="how_to_decade_title">Pour chaque dizaine</string>
-    <string name="how_to_decade">1. Annoncer le mystère\n2. Méditer sur cet événement\n3. Réciter un Notre Père\n4. Réciter dix Je vous salue Marie\n5. Réciter un Gloire au Père</string>
+    <string name="how_to_decade">1. Annonce du mystère + méditation\n2. Notre Père\n3. Dix Je vous salue Marie\n4. Gloire au Père\n5. Optionnel : prière de Fatima</string>
     <string name="how_to_closing_title">Conclusion</string>
-    <string name="how_to_closing">À la fin, on peut réciter les Litanies de Lorette ou une autre prière mariale.</string>
+    <string name="how_to_closing">1. Salve Regina (« Salut, ô Reine »)\n2. Optionnel : Litanies de Lorette\n3. Signe de croix</string>
     <string name="fruit_prefix">Fruit du mystère :</string>
     <string name="widget_description">Les mystères du Rosaire du jour</string>
 

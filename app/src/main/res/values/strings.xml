@@ -28,12 +28,12 @@
     <string name="how_to_intro_traditional">The Rosary comprises fifteen mysteries organized into three sets:</string>
     <string name="how_to_days">Joyful (Monday, Saturday) - Luminous (Thursday) - Sorrowful (Tuesday, Friday) - Glorious (Wednesday, Sunday)</string>
     <string name="how_to_days_traditional">Joyful (Monday, Thursday, Saturday) - Sorrowful (Tuesday, Friday) - Glorious (Wednesday, Sunday)</string>
-    <string name="how_to_begin_title">Begin with</string>
-    <string name="how_to_begin">In the name of the Father and of the Son and of the Holy Spirit.\n\nO God, come to my aid. O Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</string>
+    <string name="how_to_begin_title">Opening</string>
+    <string name="how_to_begin">1. Sign of the Cross\n2. Apostles\' Creed\n3. Our Father\n4. Three Hail Marys\n5. Glory Be</string>
     <string name="how_to_decade_title">For each decade</string>
-    <string name="how_to_decade">1. Announce the mystery\n2. Meditate on that event\n3. Recite one Our Father\n4. Recite ten Hail Marys\n5. Recite one Glory Be</string>
+    <string name="how_to_decade">1. Announce the mystery\n2. Our Father\n3. Ten Hail Marys\n4. Glory Be\n5. Optional: Fatima Prayer</string>
     <string name="how_to_closing_title">Closing</string>
-    <string name="how_to_closing">At the conclusion, one may recite the Litanies of Loreto or another Marian prayer.</string>
+    <string name="how_to_closing">1. Hail Holy Queen\n2. "Pray for us, O holy Mother of God…"\n3. Closing prayer: "O God, whose Only Begotten Son…"\n4. Optional: Prayer to Saint Joseph\n5. Sign of the Cross</string>
     <string name="fruit_prefix">Fruit of the mystery:</string>
     <string name="widget_description">Today\'s Rosary mysteries</string>
 
