@@ -24,6 +24,14 @@
     <string name="glory_be_text">Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.</string>
     <string name="fatima_prayer_title">Oración de Fátima</string>
     <string name="fatima_prayer_text">Oh Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno, lleva al cielo a todas las almas, especialmente a las más necesitadas de tu misericordia. Amén.</string>
+    <string name="apostles_creed_title">Credo de los Apóstoles</string>
+    <string name="apostles_creed_text">Creo en Dios, Padre Todopoderoso, Creador del cielo y de la tierra. Creo en Jesucristo, su único Hijo, Nuestro Señor, que fue concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen, padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado, descendió a los infiernos, al tercer día resucitó de entre los muertos, subió a los cielos y está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creo en el Espíritu Santo, la santa Iglesia católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna. Amén.</string>
+    <string name="hail_holy_queen_title">Salve Regina</string>
+    <string name="hail_holy_queen_text">Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra; Dios te salve. A ti llamamos los desterrados hijos de Eva; a ti suspiramos, gimiendo y llorando en este valle de lágrimas. Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre. ¡Oh, clementísima, oh piadosa, oh dulce Virgen María!</string>
+    <string name="sign_of_cross_title">Señal de la Cruz</string>
+    <string name="sign_of_cross_text">Por la señal de la Santa Cruz, de nuestros enemigos líbranos, Señor, Dios nuestro. En el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.</string>
+    <string name="maria_madre_title">María, Madre de gracia</string>
+    <string name="maria_madre_text">María, Madre de gracia, Madre de misericordia, defiéndenos de nuestros enemigos y ampáranos ahora y en la hora de nuestra muerte. Amén.</string>
     <string name="how_to_intro">El Rosario comprende veinte misterios organizados en cuatro series:</string>
     <string name="how_to_intro_traditional">El Rosario comprende quince misterios organizados en tres series:</string>
     <string name="how_to_days">Gozosos (lunes, sábado) - Luminosos (jueves) - Dolorosos (martes, viernes) - Gloriosos (miércoles, domingo)</string>

@@ -24,6 +24,10 @@
     <string name="glory_be_text">Gloire au Père et au Fils et au Saint-Esprit. Comme il était au commencement, maintenant et toujours, pour les siècles des siècles. Amen.</string>
     <string name="fatima_prayer_title">Prière de Fatima</string>
     <string name="fatima_prayer_text">Ô mon Jésus, pardonnez-nous nos péchés, préservez-nous du feu de l\'enfer, et conduisez au Ciel toutes les âmes, surtout celles qui ont le plus besoin de votre miséricorde. Amen.</string>
+    <string name="apostles_creed_title">Symbole des Apôtres</string>
+    <string name="apostles_creed_text">Je crois en Dieu, le Père tout-puissant, Créateur du ciel et de la terre. Et en Jésus Christ, son Fils unique, notre Seigneur ; qui a été conçu du Saint-Esprit, est né de la Vierge Marie, a souffert sous Ponce Pilate, a été crucifié, est mort et a été enseveli, est descendu aux enfers ; le troisième jour est ressuscité des morts, est monté aux cieux, est assis à la droite de Dieu le Père tout-puissant, d\'où il viendra juger les vivants et les morts. Je crois en l\'Esprit Saint, à la sainte Église catholique, à la communion des saints, à la rémission des péchés, à la résurrection de la chair, à la vie éternelle. Amen.</string>
+    <string name="hail_holy_queen_title">Salve Regina</string>
+    <string name="hail_holy_queen_text">Salut, ô Reine, Mère de miséricorde, notre vie, notre douceur, notre espérance, salut ! Enfants d\'Ève exilés, nous crions vers toi. Vers toi nous soupirons, gémissant et pleurant dans cette vallée de larmes. Ô toi, notre avocate, tourne vers nous ton regard miséricordieux. Et, après cet exil, montre-nous Jésus, le fruit béni de tes entrailles. Ô clémente, ô miséricordieuse, ô douce Vierge Marie.</string>
     <string name="how_to_intro">Le Rosaire comprend vingt mystères répartis en quatre séries :</string>
     <string name="how_to_intro_traditional">Le Rosaire comprend quinze mystères répartis en trois séries :</string>
     <string name="how_to_days">Joyeux (lundi, samedi) - Lumineux (jeudi) - Douloureux (mardi, vendredi) - Glorieux (mercredi, dimanche)</string>
