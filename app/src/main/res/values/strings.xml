@@ -3,6 +3,9 @@
     <string name="app_name">Rosary Mysteries</string>
     <string name="settings">Settings</string>
     <string name="language">Language</string>
+    <string name="mysteries_section">Mysteries</string>
+    <string name="luminous_enabled">Luminous Mysteries</string>
+    <string name="luminous_enabled_desc">Added by John Paul II in 2002. When disabled, Thursday uses Joyful Mysteries.</string>
     <string name="theme">Theme</string>
     <string name="theme_system">System</string>
     <string name="theme_light">Light</string>
@@ -22,7 +25,9 @@
     <string name="fatima_prayer_title">Fatima Prayer</string>
     <string name="fatima_prayer_text">O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to Heaven, especially those most in need of Thy mercy. Amen.</string>
     <string name="how_to_intro">The Rosary comprises twenty mysteries organized into four sets:</string>
+    <string name="how_to_intro_traditional">The Rosary comprises fifteen mysteries organized into three sets:</string>
     <string name="how_to_days">Joyful (Monday, Saturday) - Luminous (Thursday) - Sorrowful (Tuesday, Friday) - Glorious (Wednesday, Sunday)</string>
+    <string name="how_to_days_traditional">Joyful (Monday, Thursday, Saturday) - Sorrowful (Tuesday, Friday) - Glorious (Wednesday, Sunday)</string>
     <string name="how_to_begin_title">Begin with</string>
     <string name="how_to_begin">In the name of the Father and of the Son and of the Holy Spirit.\n\nO God, come to my aid. O Lord, make haste to help me.\n\nGlory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.</string>
     <string name="how_to_decade_title">For each decade</string>

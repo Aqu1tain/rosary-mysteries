@@ -3,6 +3,9 @@
     <string name="app_name">Mystères du Rosaire</string>
     <string name="settings">Paramètres</string>
     <string name="language">Langue</string>
+    <string name="mysteries_section">Mystères</string>
+    <string name="luminous_enabled">Mystères Lumineux</string>
+    <string name="luminous_enabled_desc">Ajoutés par Jean-Paul II en 2002. Si désactivés, le jeudi utilise les Mystères Joyeux.</string>
     <string name="theme">Thème</string>
     <string name="theme_system">Système</string>
     <string name="theme_light">Clair</string>
@@ -22,7 +25,9 @@
     <string name="fatima_prayer_title">Prière de Fatima</string>
     <string name="fatima_prayer_text">Ô mon Jésus, pardonnez-nous nos péchés, préservez-nous du feu de l\'enfer, et conduisez au Ciel toutes les âmes, surtout celles qui ont le plus besoin de votre miséricorde. Amen.</string>
     <string name="how_to_intro">Le Rosaire comprend vingt mystères répartis en quatre séries :</string>
+    <string name="how_to_intro_traditional">Le Rosaire comprend quinze mystères répartis en trois séries :</string>
     <string name="how_to_days">Joyeux (lundi, samedi) - Lumineux (jeudi) - Douloureux (mardi, vendredi) - Glorieux (mercredi, dimanche)</string>
+    <string name="how_to_days_traditional">Joyeux (lundi, jeudi, samedi) - Douloureux (mardi, vendredi) - Glorieux (mercredi, dimanche)</string>
     <string name="how_to_begin_title">Commencer par</string>
     <string name="how_to_begin">Au nom du Père et du Fils et du Saint-Esprit.\n\nDieu, viens à mon aide. Seigneur, à notre secours.\n\nGloire au Père et au Fils et au Saint-Esprit, au Dieu qui est, qui était et qui vient, pour les siècles des siècles. Amen.</string>
     <string name="how_to_decade_title">Pour chaque dizaine</string>

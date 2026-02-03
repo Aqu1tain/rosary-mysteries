@@ -3,6 +3,9 @@
     <string name="app_name">Misterios del Rosario</string>
     <string name="settings">Ajustes</string>
     <string name="language">Idioma</string>
+    <string name="mysteries_section">Misterios</string>
+    <string name="luminous_enabled">Misterios Luminosos</string>
+    <string name="luminous_enabled_desc">Añadidos por Juan Pablo II en 2002. Si se desactivan, el jueves usa los Misterios Gozosos.</string>
     <string name="theme">Tema</string>
     <string name="theme_system">Sistema</string>
     <string name="theme_light">Claro</string>
@@ -22,7 +25,9 @@
     <string name="fatima_prayer_title">Oración de Fátima</string>
     <string name="fatima_prayer_text">Oh Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno, lleva al cielo a todas las almas, especialmente a las más necesitadas de tu misericordia. Amén.</string>
     <string name="how_to_intro">El Rosario comprende veinte misterios organizados en cuatro series:</string>
+    <string name="how_to_intro_traditional">El Rosario comprende quince misterios organizados en tres series:</string>
     <string name="how_to_days">Gozosos (lunes, sábado) - Luminosos (jueves) - Dolorosos (martes, viernes) - Gloriosos (miércoles, domingo)</string>
+    <string name="how_to_days_traditional">Gozosos (lunes, jueves, sábado) - Dolorosos (martes, viernes) - Gloriosos (miércoles, domingo)</string>
     <string name="how_to_begin_title">Comenzar con</string>
     <string name="how_to_begin">En el nombre del Padre y del Hijo y del Espíritu Santo.\n\nDios mío, ven en mi auxilio. Señor, date prisa en socorrerme.\n\nGloria al Padre y al Hijo y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.</string>
     <string name="how_to_decade_title">Para cada decena</string>

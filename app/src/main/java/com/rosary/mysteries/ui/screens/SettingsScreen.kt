@@ -47,13 +47,15 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.core.os.LocaleListCompat
+import androidx.glance.appwidget.GlanceAppWidgetManager
 import com.composables.icons.lucide.ArrowLeft
 import com.composables.icons.lucide.Check
 import com.composables.icons.lucide.Lucide
 import com.rosary.mysteries.BuildConfig
 import com.rosary.mysteries.R
 import com.rosary.mysteries.data.ThemeMode
-import com.rosary.mysteries.data.rememberThemePreferences
+import com.rosary.mysteries.data.rememberAppPreferences
+import com.rosary.mysteries.widget.RosaryWidget
 import kotlinx.coroutines.launch
 import java.util.Locale
 
@@ -68,8 +70,9 @@ private val languages = mapOf(
 fun SettingsScreen(onBack: () -> Unit) {
     val context = LocalContext.current
     var currentLocale by remember { mutableStateOf(getCurrentLocale(context)) }
-    val themePreferences = rememberThemePreferences()
-    val currentTheme by themePreferences.themeMode.collectAsState(initial = ThemeMode.SYSTEM)
+    val appPreferences = rememberAppPreferences()
+    val currentTheme by appPreferences.themeMode.collectAsState(initial = ThemeMode.SYSTEM)
+    val luminousEnabled by appPreferences.luminousEnabled.collectAsState(initial = true)
     val scope = rememberCoroutineScope()
 
     Column(
@@ -88,12 +91,28 @@ fun SettingsScreen(onBack: () -> Unit) {
         ) {
             Spacer(Modifier.height(8.dp))
 
+            SettingsSection(stringResource(R.string.mysteries_section)) {
+                ToggleItem(
+                    label = stringResource(R.string.luminous_enabled),
+                    description = stringResource(R.string.luminous_enabled_desc),
+                    checked = luminousEnabled,
+                    onCheckedChange = {
+                        scope.launch {
+                            appPreferences.setLuminousEnabled(it)
+                            updateWidgets(context)
+                        }
+                    }
+                )
+            }
+
+            SectionDivider()
+
             SettingsSection(stringResource(R.string.theme)) {
                 ThemeMode.entries.forEach { mode ->
                     SelectableItem(
                         label = stringResource(mode.labelRes),
                         selected = currentTheme == mode,
-                        onClick = { scope.launch { themePreferences.setThemeMode(mode) } }
+                        onClick = { scope.launch { appPreferences.setThemeMode(mode) } }
                     )
                 }
             }
@@ -235,6 +254,71 @@ private fun SelectableItem(label: String, selected: Boolean, onClick: () -> Unit
     }
 }
 
+@Composable
+private fun ToggleItem(
+    label: String,
+    description: String,
+    checked: Boolean,
+    onCheckedChange: (Boolean) -> Unit
+) {
+    val backgroundColor by animateColorAsState(
+        targetValue = if (checked) MaterialTheme.colorScheme.secondary.copy(alpha = 0.12f)
+        else MaterialTheme.colorScheme.surface,
+        animationSpec = spring(stiffness = Spring.StiffnessLow),
+        label = "bg"
+    )
+
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 3.dp)
+            .clip(RoundedCornerShape(12.dp))
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+                onClick = { onCheckedChange(!checked) }
+            )
+            .background(backgroundColor)
+            .padding(horizontal = 18.dp, vertical = 16.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = label,
+                style = MaterialTheme.typography.bodyLarge,
+                color = if (checked) MaterialTheme.colorScheme.secondary
+                else MaterialTheme.colorScheme.onSurface
+            )
+            Spacer(Modifier.height(4.dp))
+            Text(
+                text = description,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+        Spacer(Modifier.width(12.dp))
+        Box(
+            modifier = Modifier
+                .size(24.dp)
+                .clip(RoundedCornerShape(6.dp))
+                .background(
+                    if (checked) MaterialTheme.colorScheme.secondary
+                    else MaterialTheme.colorScheme.outline.copy(alpha = 0.3f)
+                ),
+            contentAlignment = Alignment.Center
+        ) {
+            if (checked) {
+                Icon(
+                    Lucide.Check,
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.surface,
+                    modifier = Modifier.size(16.dp)
+                )
+            }
+        }
+    }
+}
+
 private fun getCurrentLocale(context: Context): String {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
         val locales = context.getSystemService(LocaleManager::class.java)?.applicationLocales
@@ -250,5 +334,13 @@ private fun setLocale(context: Context, languageCode: String) {
         context.getSystemService(LocaleManager::class.java)?.applicationLocales = LocaleList.forLanguageTags(languageCode)
     } else {
         AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(languageCode))
+    }
+}
+
+private suspend fun updateWidgets(context: Context) {
+    val manager = GlanceAppWidgetManager(context)
+    val widget = RosaryWidget()
+    manager.getGlanceIds(RosaryWidget::class.java).forEach { id ->
+        widget.update(context, id)
     }
 }

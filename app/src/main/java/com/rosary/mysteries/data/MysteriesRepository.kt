@@ -55,7 +55,9 @@ object MysteriesRepository {
         )
     )
 
-    fun getAll(): List<MysterySet> = listOf(joyful, sorrowful, glorious, luminous)
+    fun getAll(luminousEnabled: Boolean = true): List<MysterySet> =
+        if (luminousEnabled) listOf(joyful, sorrowful, glorious, luminous)
+        else listOf(joyful, sorrowful, glorious)
 
     fun getByType(type: MysteryType): MysterySet = when (type) {
         MysteryType.JOYFUL -> joyful
@@ -64,5 +66,6 @@ object MysteriesRepository {
         MysteryType.LUMINOUS -> luminous
     }
 
-    fun getToday(): MysterySet = getByType(MysteryType.today())
+    fun getToday(luminousEnabled: Boolean = true): MysterySet =
+        getByType(MysteryType.today(luminousEnabled))
 }

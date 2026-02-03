@@ -1,0 +1,240 @@
+================================================================================
+                           ROSARY MYSTERIES - APPLICATION DOCUMENTATION
+================================================================================
+
+OVERVIEW
+--------
+Rosary Mysteries is an Android application designed to help Catholics pray the
+Rosary. It displays the 20 mysteries of the Rosary organized into four sets,
+with each mystery linking to the corresponding Bible passage on YouVersion.
+
+Package: com.rosary.mysteries
+Version: 1.0.1 (versionCode 2)
+Min SDK: 26 (Android 8.0)
+Target SDK: 35
+
+
+================================================================================
+                                    FEATURES
+================================================================================
+
+MYSTERIES
+---------
+The app contains all 20 mysteries of the Rosary:
+
+  JOYFUL MYSTERIES (Monday, Saturday)
+    1. The Annunciation - Lk 1:26-38 - Fruit: Humility
+    2. The Visitation - Lk 1:39-56 - Fruit: Love of neighbor
+    3. The Nativity - Lk 2:1-20 - Fruit: Poverty, detachment
+    4. The Presentation - Lk 2:22-40 - Fruit: Obedience
+    5. Finding in the Temple - Lk 2:41-52 - Fruit: Seeking God in all things
+
+  SORROWFUL MYSTERIES (Tuesday, Friday)
+    1. The Agony in the Garden - Mt 26:36-46 - Fruit: Contrition for sins
+    2. The Scourging at the Pillar - Mt 27:26 - Fruit: Mortification of the senses
+    3. The Crowning with Thorns - Mt 27:27-31 - Fruit: Contempt of the world
+    4. The Carrying of the Cross - Mk 15:21-22 - Fruit: Patience in trials
+    5. The Crucifixion - Lk 23:33-46 - Fruit: Forgiveness of injuries
+
+  GLORIOUS MYSTERIES (Wednesday, Sunday)
+    1. The Resurrection - Lk 24:1-12 - Fruit: Faith
+    2. The Ascension - Mk 16:19-20 - Fruit: Hope and desire for Heaven
+    3. The Descent of the Holy Spirit - Acts 2:1-13 - Fruit: Gifts of the Holy Spirit
+    4. The Assumption - Lk 1:46-55 - Fruit: Grace of a happy death
+    5. The Coronation - Rev 12:1-6 - Fruit: Devotion to Mary
+
+  LUMINOUS MYSTERIES (Thursday)
+    1. The Baptism in the Jordan - Mt 3:13-17 - Fruit: Fidelity to baptismal promises
+    2. The Wedding at Cana - Jn 2:1-12 - Fruit: Trust in Mary
+    3. The Proclamation of the Kingdom - Mk 1:14-15 - Fruit: Conversion of heart
+    4. The Transfiguration - Mt 17:1-9 - Fruit: Desire for holiness
+    5. The Institution of the Eucharist - Mt 26:26-30 - Fruit: Love of the Eucharist
+
+BIBLE DEEP LINKS
+----------------
+Tapping a mystery opens the corresponding Bible passage in YouVersion (bible.com).
+The app selects the appropriate Bible translation based on the device language:
+  - English: ESV (version 59)
+  - French: Louis Segond 1910 (version 93)
+  - Spanish: Reina Valera 1960 (version 149)
+  - Italian: Nuova Riveduta 2006 (version 122)
+
+AUTOMATIC MYSTERY SELECTION
+---------------------------
+The app automatically displays today's mysteries based on the traditional schedule:
+  - Monday, Saturday: Joyful
+  - Tuesday, Friday: Sorrowful
+  - Wednesday, Sunday: Glorious
+  - Thursday: Luminous
+
+Users can manually select any mystery set via the navigation drawer.
+
+HOW TO PRAY GUIDE
+-----------------
+The app includes a guide explaining how to pray the Rosary:
+  - Introduction explaining the four mystery sets
+  - Beginning prayers
+  - How to pray each decade
+  - Closing prayers
+
+SETTINGS
+--------
+  - Theme: System / Light / Dark
+  - Language: English, French, Spanish, Italian
+  - Version display at bottom of settings
+
+SUPPORT
+-------
+Ko-fi link for donations: https://ko-fi.com/corentin_r
+
+
+================================================================================
+                                  DESIGN STYLE
+================================================================================
+
+AESTHETIC DIRECTION
+-------------------
+"Illuminated Manuscript" - inspired by medieval religious manuscripts with warm,
+elegant colors evoking parchment, gold leaf, and aged leather.
+
+TYPOGRAPHY
+----------
+Two Google Fonts are used:
+
+  LORA (Serif) - For titles and headings
+    - Weights: Regular, Medium, SemiBold, Bold, Italic
+    - Used in: Display, Headline, Title styles
+    - Character: Elegant, slightly calligraphic serifs
+
+  CRIMSON TEXT (Serif) - For body text and labels
+    - Weights: Regular, SemiBold, Bold, Italic
+    - Used in: Body, Label styles
+    - Character: Classical, highly readable
+
+COLOR PALETTE
+-------------
+
+  LIGHT THEME (Parchment aesthetic):
+    - Background: Parchment (#FDF8F3) - warm off-white like aged paper
+    - Surface: Cream (#FFFDF9) - slightly lighter
+    - Primary: Sepia (#2C1810) - deep brown-black for text
+    - Secondary: Gold Leaf (#D4A84B) - rich gold for accents
+    - Tertiary: Umber (#6B5344) - muted brown
+    - Surface Variant: Vellum (#F0E6D8) - warmer beige
+
+  DARK THEME (Candlelit reading aesthetic):
+    - Background: Obsidian (#0F0D0B) - deep warm black
+    - Surface: Dark Leather (#1C1714) - like old book binding
+    - Primary: Antique Cream (#E5D9C9) - warm text color
+    - Secondary: Candlelight (#EAC87C) - glowing gold
+    - Tertiary: Warm Amber (#CFB896) - muted gold
+    - Surface Variant: Mahogany (#3D2E26) - rich wood tone
+
+ANIMATIONS & INTERACTIONS
+-------------------------
+  - Staggered fade-in + slide-up for mystery cards on load
+  - Animated title transitions when switching mystery sets
+  - Touch feedback: scale animation (97%) on mystery card press
+  - Spring-based animations for smooth, natural feel
+
+LAYOUT
+------
+  - Modal navigation drawer for mystery selection
+  - Clean vertical list of mystery cards
+  - Each card shows: number badge, title, Bible reference, description, fruit
+  - Subtle dividers between mysteries
+  - Edge-to-edge design with transparent status/navigation bars
+
+ICONS
+-----
+Lucide icon set (com.composables:icons-lucide):
+  - Menu (hamburger)
+  - ArrowLeft (back navigation)
+  - BookOpen (How to Pray)
+  - Settings (gear)
+  - Heart (Support)
+  - Check (selection indicator)
+
+
+================================================================================
+                              TECHNICAL ARCHITECTURE
+================================================================================
+
+STACK
+-----
+  - Language: Kotlin
+  - UI Framework: Jetpack Compose + Material 3
+  - Navigation: Compose Navigation
+  - Persistence: DataStore Preferences
+  - Build: Gradle 9.2.1 + AGP 8.7.x
+
+PROJECT STRUCTURE
+-----------------
+  com.rosary.mysteries/
+    ├── MainActivity.kt          - Entry point, theme application
+    ├── domain/
+    │   ├── Mystery.kt           - Mystery data class
+    │   ├── MysterySet.kt        - Mystery set (type + mysteries)
+    │   └── MysteryType.kt       - Enum with day-based selection
+    ├── data/
+    │   ├── MysteriesRepository.kt   - All mystery data
+    │   ├── ThemePreferences.kt      - Theme persistence
+    │   └── PreferencesManager.kt    - Language preferences
+    └── ui/
+        ├── Navigation.kt        - NavHost setup
+        ├── theme/
+        │   └── Theme.kt         - Colors, typography, theme
+        ├── screens/
+        │   ├── HomeScreen.kt    - Main screen with drawer
+        │   ├── SettingsScreen.kt
+        │   └── HowToScreen.kt
+        └── components/
+            └── MysteryCard.kt   - Individual mystery display
+
+LOCALIZATION
+------------
+Fully translated in 4 languages:
+  - res/values/strings.xml (English - default)
+  - res/values-fr/strings.xml (French)
+  - res/values-es/strings.xml (Spanish)
+  - res/values-it/strings.xml (Italian)
+
+Language can be changed in-app via Settings, using:
+  - LocaleManager (Android 13+)
+  - AppCompatDelegate (older versions)
+
+
+================================================================================
+                                   DISTRIBUTION
+================================================================================
+
+REPOSITORY
+----------
+GitHub: https://github.com/Aqu1tain/rosary-mysteries
+License: All Rights Reserved (non-commercial use only)
+
+BRANCHES
+--------
+  - main: Production releases only
+  - dev: Development branch, all features merged here first
+  - feature/*: Feature branches, squash merged to dev
+
+RELEASE
+-------
+  - APK available on GitHub Releases
+  - AAB for Google Play Store (internal/closed testing)
+
+PRIVACY
+-------
+  - No data collection
+  - No special permissions required
+  - Only external link: YouVersion (bible.com)
+
+
+================================================================================
+                                    CREDITS
+================================================================================
+
+Made with love by Akitain. UOP
+
+================================================================================
